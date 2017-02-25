@@ -1,0 +1,2166 @@
+html, body{
+  font-family: 'Quicksand', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  //background: #000;
+}
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: fixed;
+}
+.loading{
+  width: 100%;
+  height: 100vh;
+  min-height: 800px\9;
+  height: 100%\9;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+.content  {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* Video */
+#controlBar_bgndVideo{
+  display: none;
+}
+.videoHH{
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-animation-name: openVideo;
+  animation-name: openVideo;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  .videoWrapper{
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+    .videoContent{
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+  	  padding-top: 25px;
+  	  height: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      .button{
+        position: absolute;
+        top: 0;/**/
+        right:0;
+        cursor: pointer;
+        display: block;
+        .lines {
+          display: inline-block;
+          width: 18px;
+          height: 4px;
+          // @include roundedBox(5px);
+          // transition: 0.3s;
+          position: relative;
+          background: transparent;
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+
+          /* 動態 */
+          -webkit-animation-name: buttonWidth;
+          animation-name: buttonWidth;
+          -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+          -webkit-animation-delay:2s;
+          animation-delay:2s;
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+          // -webkit-animation-iteration-count:1;
+          // animation-iteration-count:1;
+          -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+          animation-fill-mode: forwards;
+          transform: scaleX(0);
+          opacity: 0;
+          &:before, &:after {
+            display: inline-block;
+            width: 18px;
+            height: 4px;
+            background: $greyLight;
+            // @include roundedBox(5px);
+            position: absolute;
+
+            content: '';
+            z-index: 2;
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-delay:3s;
+            animation-delay:3s;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+            -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+            animation-fill-mode: forwards;
+            // -webkit-transform-origin: 0.28571rem center;
+            // transform-origin: 0.28571rem center;
+            // -webkit-transform-origin: 50% 50%;
+            // transform-origin: 50% 50%;
+            // top: 0;
+          }
+          &:before{
+
+          /* 動態 */
+          // position: absolute;
+          -webkit-animation-name: buttonBefore;
+          animation-name: buttonBefore;
+          // -webkit-animation-iteration-count:1;
+          // animation-iteration-count:1;
+
+          }
+          &:after{
+
+          /* 動態 */
+          // position: absolute;
+          -webkit-animation-name: buttonAfter;
+          animation-name: buttonAfter;
+          }
+        }
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media (max-width:1024px)and (orientation:landscape){
+.videoHH{
+  padding:0 40px;
+  .videoWrapper{
+    width: 80%;
+    .videoContent{
+      top: 20%;
+      @include transform(translateY(-20%));
+    }
+  }
+}
+}
+@media (max-width:992px)and (orientation:portrait){
+.videoHH{
+  .videoWrapper{
+    .videoContent{
+      top: 30%;
+      @include transform(translateY(-30%));
+    }
+  }
+}
+}
+.loadingAction{
+  -webkit-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+.nav{
+  position: fixed;
+  height: 110px;
+  width: 100%;
+  top: -110px;
+  left: 0;
+  zoom: 1;
+  z-index: 10;
+  transition: .5s;/**/
+  @include setMediaQueries(1100px) {
+    width: 200px;
+    height: 54px;
+  };
+  .navCon{
+    width: 86%;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    position:relative;
+    @include setMediaQueries(1335px) {
+      width: 90%;
+    };
+    @include setMediaQueries(1300px) {
+      width: 100%;
+      padding: 30px 15px;
+    };
+    .logo{
+      width: 150px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      @include setMediaQueries(1300px) {
+        left: 15px;
+      };
+      @include setMediaQueries(1100px) {
+        left: 22px;
+        top: 15px;
+      };
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .navMain{
+      width: calc(100% - 175px);
+      float: right;
+      *width:auto;
+      *margin-right: 30px;
+      width: 85%\0;
+      text-align: right;
+      a{
+        display: inline-block;
+        color: #fff;
+        line-height: 50px;
+        padding-left: 5%;
+        @include fontSS(pad_v);
+      }
+    }
+  }
+}
+
+.navChange{
+  height: 73px;/**/
+  background: $blue;/**/
+  @include setMediaQueries(1100px) {
+    width: 200px;
+    height: 54px;
+  };
+  .navCon{
+    width: 87%;
+    margin: 0 auto;
+    padding: 10px 0;/**/
+    text-align: center;
+    position:relative;
+    @include setMediaQueries(1335px) {
+      width: 86%;
+    };
+    @include setMediaQueries(1300px) {
+      width: 100%;
+      padding: 10px 15px;
+    };
+    .logo{
+      width: 150px;
+      position: absolute;
+      top: 23px;/**/
+      left: 0;
+      @include setMediaQueries(1300px) {
+        left: 15px;
+      };
+      @include setMediaQueries(1100px) {
+        left: 22px;
+        top: 15px;
+      };
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}
+.navAction{
+	@include transform(translateY(110px));
+  @include transition(transform .8s cubic-bezier(.79,.1,.49,1.43)0s);
+  @include setMediaQueries(1100px) {
+    @include transform(translateY(110px));
+  };
+}
+.kv{
+  height: 100vh;
+  *height: 650px;
+  min-height: 650px\9;
+  width: 100vw;
+  width: 100%\9;
+  position: relative;
+  .main{
+    width: 100vw;
+    width: 100%\9;
+    text-align: center;
+    z-index: 7;
+    position: absolute;
+    top: -15%;
+    *margin-top: -30px;
+    margin-top: -30px\9;
+    opacity: 0;
+    transition: 1s;/**/
+    @include transform(translateY(-50%));
+    h1{
+      p{
+        color: #fff;
+        @include fontLL(phone);
+        &:nth-child(2){
+          @include fontS(phone);
+          line-height: 2.5vh;
+          margin: 2vh auto 0 auto;
+          font-weight: normal;
+        }
+        &.ieSize{
+          @include fontS(phone);
+          *line-height: 25px;
+          *margin: 10px auto 0 auto;
+        }
+      }
+    }
+    .videoPlay{
+      width: 100px;
+      height: 100px;
+      margin: 5vh auto 0 auto;;
+      cursor:pointer;
+      @include setMediaQueries(pad_h) {
+        width: 75px;
+        height: 75px;
+      };
+    }
+  }
+  .mouse{
+    position: absolute;
+    text-align: center;
+    bottom: 8vh;
+    *bottom: 8%;
+    bottom: 8%\9;
+    margin-left: -40px\9;
+    *margin-left: -40px;
+    // *display: none;
+    // *visibility: hidden;
+    // display: none\9;
+    z-index: 7;
+    left: 50%;
+    opacity: 0;
+    @include transform(translateX(-50%));
+    -ms-transform:none;
+    .mouseBody{
+      width: 25px;
+      height: 45px;
+      margin: 0 auto;
+      border: 2px solid #fff;
+      @include roundedBox(15px);
+      text-align: center;
+      position: relative;
+    }
+    .mouseBody:after{
+      content: "•";
+      color: #fff;
+      left: 7px;
+      position: absolute;
+      -webkit-animation-name: dot-icon-down ;
+      animation-name: dot-icon-down ;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-delay:5s;
+      animation-delay:5s;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-animation-iteration-count:infinite;
+      animation-iteration-count:infinite;
+      @include transform(translateY(2px));
+    }
+    .material-icons{
+      /* 字樣 */
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;  /* Preferred icon size */
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      /* Support for all WebKit browsers. */
+      -webkit-font-smoothing: antialiased;
+      /* Support for Safari and Chrome. */
+      text-rendering: optimizeLegibility;
+      /* Support for Firefox. */
+      -moz-osx-font-smoothing: grayscale;
+      /* Support for IE. */
+      font-feature-settings: 'liga';
+
+      /* 動態 */
+      -webkit-animation-name: mouseArrow ;
+      animation-name: mouseArrow ;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-delay:6.5s;
+      animation-delay:6.5s;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-animation-iteration-count:infinite;
+      animation-iteration-count:infinite;
+      transform: translateY(0);
+      color: #fff;
+    }
+  }
+}
+:root .main { margin-top: 0\0/IE9; }
+:root .mouse { display: block\0/IE9; }
+.wrapper {
+    z-index:600;
+    position:relative
+}
+.pattern {
+    background: #15244d;
+    opacity: 0.57;
+    filter:Alpha(opacity=57);/* 只支持IE6、7、8、9 */
+    *zoom:1;
+    width:100vw;
+    width: 100%\9;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 6;
+}
+.gallery {
+    z-index:5;
+    width: 100%;
+    height:100vh;
+    min-height: 650px\9;
+    position:absolute;
+    overflow:hidden;
+    .bg{
+      width: 100%;
+      height:100vh;
+      min-height: 650px\9;
+      @include fullBG;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-position: center;
+      -webkit-transition: opacity 2s linear;
+      -moz-transition: opacity 2s linear;
+      -o-transition: opacity 2s linear;
+      transition: opacity 2s linear;
+    }
+    .bgL{
+      background-position: left;
+    }
+    .fadein{
+        opacity:100;
+    }
+    .fadeout{
+        opacity:0;
+    }
+}
+.big-background-default-image {
+    background:url(../images/small.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    width:100%;
+    height:100%;
+    min-height: 650px\9;
+    z-index:0;
+    // backface-visibility:hidden
+}
+
+/* ourApp
+================================================== */
+.ourApp{
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  z-index: 8;
+  padding: 70px 0;
+  position: relative;
+  box-sizing: border-box;
+  // overflow: hidden;
+  @include setMediaQueries(pad_h) {
+    padding: 45px 0 50px 0;
+  };
+  h2{
+    @include fontL(pad_h);
+    @include fontL(phone);
+    margin-bottom: 10px;
+    @include setMediaQueries(pad_h) {
+      margin-bottom: 8px;
+    };
+  }
+  p{
+    color: $grey;
+    @include fontS(phone);
+    line-height: 20px;
+  }
+  .clickDown{
+    width: 80%;
+    margin: 70px auto 0 auto;
+    overflow: hidden;
+    @include setMediaQueries(pad_h) {
+      margin: 36px auto 0 auto;
+      width: 95%;
+    };
+    @include setMediaQueries(phone) {
+      margin: 70px auto 0 auto;
+      width: 90%;
+    };
+    a{
+      width: 20%;
+      *width:16%;
+      display: block;
+      float: left;
+      *float: none;
+      *display: inline-block;
+      border-left:1px solid $greyLight;
+      *border-left:0!important;
+      margin-bottom: 40px;
+      padding: 20px 10px;
+      @include setMediaQueries(pad_h) {
+        margin-bottom: 0;
+      };
+      @include setMediaQueries(phone) {
+        width: 50%;
+        *width: 45%;
+        padding: 10px 10px 0 10px;
+        margin-bottom: 35px;
+      };
+      img{
+        width: 100px;
+        margin-bottom: 50px;
+        @include setMediaQueries(pad_h) {
+          margin-bottom: 25px;
+        };
+      }
+      p{
+        color: #000;
+        //font-size: $fontS;
+        @include fontS(phone);
+        line-height: 20px;
+        min-height: 50px;
+        margin-bottom: 40px;
+        @include setMediaQueries(pad_h) {
+          margin-bottom: 33px;
+        };
+        @include setMediaQueries(phone) {
+          margin-bottom: 0;
+        };
+        span{
+          @include setMediaQueries(pad_h) {
+            display: block;
+          };
+        }
+      }
+      .arrowDown{
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        @include roundedBox(100%);
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        background:url(../images/arrowDown.png);
+        *background:url(../images/arrowDown.png);
+        *cursor: pointer;
+        background:url(../images/arrowDown.png)\0;
+        @include setMediaQueries(phone) {
+          display: none;
+        };
+        .material-icons {
+          /* 字樣 */
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          /* Support for all WebKit browsers. */
+          -webkit-font-smoothing: antialiased;
+          /* Support for Safari and Chrome. */
+          text-rendering: optimizeLegibility;
+          /* Support for Firefox. */
+          -moz-osx-font-smoothing: grayscale;
+          /* Support for IE. */
+          font-feature-settings: 'liga';
+
+          /* 動態 */
+          transform: translateZ(0);
+          transition-duration: 0.1s;
+          transition-property: transform;
+          transition-timing-function: ease-out;
+
+          width: 54px;
+          height: 54px;
+          line-height: 54px;
+          color:#555555;
+          position: absolute;
+          z-index: 2;
+          top:3px;
+          left:3px;
+          *display: none;
+          *visibility: hidden;
+          display: none\0;
+        }
+        .circle{
+          position: absolute;
+          z-index: 1;
+          top:3px;
+          left:3px;
+          width: 54px;
+          height: 54px;
+          border-radius: 100%;
+          background: #fff;
+          box-shadow: 30px -30px 0 3px $greyLight,
+          -30px -30px 0 3px $greyLight,
+          -30px 30px 0 3px $greyLight,
+          30px 30px 0 3px $greyLight,
+          0 0 0 3px $greyLight;
+          *display: none;
+          *visibility: hidden;
+          display: none\0;
+        }
+      }
+      &:hover .circle{
+        animation: border .3s ease 1 forwards;
+        cursor: pointer;
+      }
+      &:hover .material-icons{
+        -webkit-animation-name: hvr-icon-down;
+        animation-name: hvr-icon-down;
+        -webkit-animation-duration: 0.75s;
+        animation-duration: 0.75s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+    }
+    a:nth-child(5n-4){
+      border: 0;
+    }
+    @include setMediaQueries(phone) {
+      a{
+        border-left:1px solid $greyLight!important;
+      }
+      a:nth-child(2n-1){
+        border: 0!important;
+      }
+    };
+  }
+}
+.ourApp::after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right:50%;
+    -webkit-transform: translate(-70%,0)rotate(-3.5deg);
+    -ms-transform: translate(-70%,0)rotate(-3.5deg);
+    transform: translate(-70%,0)rotate(-3.5deg);
+    display: block;
+    content: '';
+    width: 250vw;
+    height: 350px;
+    background: #fff;
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+/* Clock
+================================================== */
+.clock{
+  /* background */
+  background-color:$blue;
+  background-image:
+  linear-gradient($blue 1px, transparent 1px),
+  linear-gradient(90deg, $blue 1px, transparent 1px),
+  linear-gradient(rgba(255,255,255,.5) 2px, transparent 2px),
+  linear-gradient(90deg, rgba(255,255,255,.5) 2px, transparent 2px);
+  background-size: 2px 2px, 2px 2px,160px 160px, 160px 160px;
+  background-position: -1px -1px, -1px -1px,0px 0px, -2px -2px;
+
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
+  *overflow: hidden;
+  h2{
+    @include fontL(pad_h);
+    @include fontL(phone);
+  }
+  .littleTitle{
+    color: $yellowLight;
+    @include fontS(phone);
+    margin: 20px 0 40px 0;
+    @include setMediaQueries(phone) {
+      margin: 20px 0 50px 0;
+    };
+  }
+  .clockFace{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    display: inline-block;
+    background: url(../images/clockFace.png);
+    @include setMediaQueries(phone) {
+      width: 240px;
+      height: 240px;
+      background-size: 240px;
+      background: url(../images/clockFaceS.png)\9;
+    };
+    #sec, #min, #hour {
+      position: absolute;
+      width: 25px;
+      height: 400px;
+      top: 0px;
+      left: 188px;
+      @include setMediaQueries(phone) {
+        width: 15px;
+        height: 240px;
+        left: 108px;
+        display: none\9;
+      };
+    }
+    #sec {
+      background: url(../images/sec.png);
+      z-index: 3;
+      @include setMediaQueries(phone) {
+        background-size:15px 240px;
+      };
+    }
+    #min {
+      background: url(../images/min.png);
+      z-index: 2;
+      @include setMediaQueries(phone) {
+        background-size:15px 240px;
+      };
+    }
+    #hour {
+      background: url(../images/hour.png);
+      z-index: 1;
+      @include setMediaQueries(phone) {
+        background-size:15px 240px;
+      };
+    }
+    p{
+      text-align: left;
+      font-size: 15px;
+      line-height: 18px;
+      position: absolute;
+      display: inline-block;
+      @include setMediaQueries(phone) {
+        font-size: 13px;
+      };
+      &.timeA{
+        top: -20px;
+        right: 45px;
+        @include setMediaQueries(phone) {
+          top: -33px;
+          right: 32px;
+        };
+      }
+      &.timeB{
+        top: 110px;
+        right: -65px;
+        @include setMediaQueries(phone) {
+          top: 55px;
+          right: -55px;
+        };
+      }
+      &.timeC{
+        top: 183px;
+        right: -75px;
+        @include setMediaQueries(phone) {
+          top: 115px;
+          right: -65px;
+        };
+      }
+      &.timeD{
+        bottom: 10px;
+        right: 0;
+        @include setMediaQueries(phone) {
+          bottom: -24px;
+          right: 7px;
+        };
+      }
+      &.timeE{
+        bottom: -35px;
+        left: 80px;
+        @include setMediaQueries(phone) {
+          bottom: -36px;
+          left: 42px;
+        };
+      }
+      &.timeF{
+        bottom: 28px;
+        left: -20px;
+        @include setMediaQueries(phone) {
+          bottom: 2px;
+          left: -21px;
+        };
+      }
+      &.timeG{
+        bottom: 115px;
+        left: -65px;
+        @include setMediaQueries(phone) {
+          bottom: 65px;
+          left: -53px;
+        };
+      }
+      &.timeH{
+        top: 167px;
+        left: -75px;
+        @include setMediaQueries(phone) {
+          top: 55px;
+          left: -53px;
+        };
+      }
+      &.timeI{
+        top: 0;
+        left: 15px;
+        @include setMediaQueries(phone) {
+          top: -17px;
+          left: 15px;
+        };
+      }
+    }
+  }
+  img{
+    @include setMediaQueries(pad_h) {
+      width: 50%;
+    };
+    @include setMediaQueries(phone) {
+      width: 100%;
+    };
+  }
+}
+:root .clock .clockFace #sec { display: block\0/IE9; }
+:root .clock .clockFace #min { display: block\0/IE9; }
+:root .clock .clockFace #hour { display: block\0/IE9; }
+/* Epaper
+================================================== */
+.epaper{
+  background: url(../images/bg-epaper.png) right bottom $blackLight no-repeat;
+  padding:200px 15% 200px 55%;
+  *padding:200px 0;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  @include setMediaQueries(pc) {
+    padding:160px 8% 160px 53%;
+    *padding:160px 0;
+  };
+  @include setMediaQueries(phone) {
+    padding:60px 8% 50px 8%;
+    *padding:60px 0 50px 0;
+    background: $blackLight;
+  };
+  .epaperPlace{
+    position: absolute;
+    top:-70px;
+  }
+  .epaperImg{
+    width: 30%;
+    position: absolute;
+    right: 53%;
+    top: 44px;
+    text-align: right;
+    opacity: 0;
+    -webkit-transform: translateX(-30vw);
+    transform: translateX(-30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(pc) {
+      width: 33%;
+    };
+    @include setMediaQueries(pad_h) {
+      width: 40%;
+    };
+    @include setMediaQueries(phone) {
+      width: 90%;
+      position: relative;
+      right: auto;
+      left: 0;
+      top: auto;
+      text-align: center;
+      margin:0 auto 60px auto;
+    };
+    img{
+      max-width: 100%;
+    }
+  }
+  h3{
+    color: $yellowDark;
+    @include fontL(pc);
+    @include fontL(pad_h);
+    @include fontL(phone);
+  }
+  p{
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 35px 0;
+    @include setMediaQueries(phone) {
+      margin: 15px 0 25px 0;
+    };
+  }
+  .appInfor{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @include setMediaQueries(phone) {
+      width: calc(100vw - 16vw);
+    }
+    .appDL{
+      width: 80px;
+      float: left;
+      display: block;
+      overflow: hidden;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+        background: #000;
+        @include roundedBox(100%);
+        @include setMediaQueries(phone) {
+          display: block;
+        }
+      }
+      &:first-child{
+        margin-right: 20px;
+        @include setMediaQueries(phone) {
+          margin-right: 4%;
+        }
+      }
+    }
+    .supportA, .supportB{
+      float: left;
+    }
+    .supportA{
+      width: 80px;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+    .supportB{
+      color: #fff;
+      font-size: 15px;
+      line-height: 18px;
+      width: calc(100% - 260px);
+      margin: 31px 0 0 0;
+      @include setMediaQueries(pad_v) {
+        margin: 22px 0 0 0;
+      };
+      @include setMediaQueries(phone) {
+        width: calc(100% - 73%);
+        margin: 21px 0 0 0;
+      };
+    }
+  }
+  .animate.animation.left{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .animate.right{
+    position: relative;
+    opacity: 0;
+    -webkit-transform: translateX(30vw);
+    transform: translateX(30vw);
+    @include transition(0.5s);
+    *margin: 0 15% 0 55%;
+    @include setMediaQueries(pad_h) {
+      *margin: 0 5% 0 55%;
+    };
+    @include setMediaQueries(phone) {
+      *width: 84%;
+      *margin: 0 auto;
+    }
+  }
+  .animate.animation.right{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+// :root .epaper .appInfor .appDL{
+//   max-height: 80px;
+//   // @include setMediaQueries(phone) {
+//   //   height: auto;
+//   // }
+// }
+/* TutorMobile
+================================================== */
+.tutormobile{
+  background: url(../images/bg-tutormobile.png) left top #ffffff no-repeat;
+  background-size: auto 100%;
+  padding:200px 53% 200px 17.5%;
+  *padding: 200px 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  *overflow: hidden;
+  @include setMediaQueries(1570px) {
+    padding:160px 53% 160px 15%;
+    *padding: 160px 0;
+  };
+  @include setMediaQueries(1450px) {
+    padding:160px 50% 160px 11%;
+    *padding: 160px 0;
+  };
+  @include setMediaQueries(pc) {
+    padding:160px 48% 160px 10%;
+    *padding: 160px 0;
+  };
+  @include setMediaQueries(pad_h) {
+    padding:160px 55% 160px 7%;
+    *padding: 160px 0;
+  };
+  @include setMediaQueries(pad_v) {
+    padding:140px 55% 140px 7%;
+    *padding: 140px 0;
+  };
+  @include setMediaQueries(phone) {
+    padding:60px 8% 50px 8%;
+    *padding:60px 0 50px 0;
+    background: #ffffff;
+  };
+  .tutormobilePlace{
+    position: absolute;
+    top: -70px;
+  }
+  .tutormobileImg{
+    width: 65%;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    text-align: left;
+    opacity: 0;
+    -webkit-transform: translateX(30vw);
+    transform: translateX(30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(pad_h) {
+      width: 75%;
+      left: 45%;
+    };
+    @include setMediaQueries(pad_v) {
+      top: 85px;
+      -webkit-transform: translateX(-30vw);
+      transform: translateX(-30vw);
+    };
+    @include setMediaQueries(phone) {
+      width: 185%;
+      position: relative;
+      left: -8%;
+      *left:0;
+      top: auto;
+      text-align: left;
+      margin: 0 auto;
+    };
+    img{
+      max-width: 100%;
+    }
+  }
+  h3{
+    color: $blue;
+    @include fontL(pc);
+    @include fontL(pad_h);
+    @include fontL(phone);
+  }
+  p{
+    color: #000000;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 35px 0;
+  }
+  .appInfor{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @include setMediaQueries(phone) {
+      width: calc(100vw - 16vw);
+    }
+    .appDL{
+      width: 80px;
+      float: left;
+      display: block;
+      overflow: hidden;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+        background: #000;
+        @include roundedBox(100%);
+        @include setMediaQueries(phone) {
+          display: block;
+        }
+      }
+      &:first-child{
+        margin-right: 20px;
+        @include setMediaQueries(phone) {
+          margin-right: 4%;
+        }
+      }
+    }
+    .supportA, .supportB{
+      float: left;
+    }
+    .supportA{
+      width: 80px;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+    .supportB{
+      color: $grey;
+      font-size: 15px;
+      line-height: 18px;
+      width: calc(100% - 260px);
+      margin: 31px 0 0 0;
+      @include setMediaQueries(pad_v) {
+        margin: 22px 0 0 0;
+      };
+      @include setMediaQueries(phone) {
+        width: calc(100% - 73%);
+        margin: 21px 0 0 0;
+      };
+    }
+  }
+  .animate.animation.left{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .animate.right{
+    position: relative;
+    opacity: 0;
+    -webkit-transform: translateX(-30vw);
+    transform: translateX(-30vw);
+    *margin: 0 53% 0 17%;
+    @include transition(0.5s);
+    @include setMediaQueries(pad_h) {
+      *margin: 0 53% 0 5%;
+    };
+    @include setMediaQueries(pad_v) {
+      -webkit-transform: translateX(30vw);
+      transform: translateX(30vw);
+    };
+    @include setMediaQueries(phone) {
+      *width: 84%;
+      *margin: 0 auto;
+    }
+  }
+  .animate.animation.right{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+// :root .tutormobile .appInfor .appDL{
+//   max-height: 80px;
+//   // @include setMediaQueries(phone) {
+//   //   height: auto;
+//   // }
+// }
+/* TutorABCJr
+================================================== */
+.tutorABCJr{
+  background: url(../images/bg-tjr.png) right bottom #42b53a no-repeat;
+  padding:165px 17.5% 165px 52.5%;
+  *padding:165px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  *overflow: hidden;
+  @include setMediaQueries(1500px) {
+    padding:165px 10% 165px 52.5%;
+    *padding:165px 0;
+  };
+  @include setMediaQueries(pc) {
+    padding: 140px 9% 140px 50%;
+    *padding:140px 0;
+  };
+  @include setMediaQueries(pad_h) {
+    padding: 140px 10% 140px 52%;
+    *padding:140px 0;
+  };
+  @include setMediaQueries(pad_v) {
+    padding: 140px 5% 140px 47%;
+    *padding:140px 0;
+  };
+  @include setMediaQueries(phone) {
+    padding:60px 8% 50px 8%;
+    *padding:60px 0 50px 0;
+    background: #42b53a;
+  };
+  .tutorABCJrPlace{
+    position: absolute;
+    top: -70px;
+  }
+  .tutorABCJrImg{
+    width: 57%;
+    position: absolute;
+    right: 57.5%;
+    top: 80px;
+    text-align: right;
+    opacity: 0;
+    -webkit-transform: translateX(-30vw);
+    transform: translateX(-30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(pc) {
+      width: 65%;
+    };
+    @include setMediaQueries(pad_h) {
+      width: 73%;
+      right: 51%;
+    };
+    @include setMediaQueries(pad_v) {
+      right: 57%;
+      top: initial;
+    };
+    @include setMediaQueries(phone) {
+      width: 118%;
+      position: relative;
+      right: auto;
+      left: -16vw;
+      top: auto;
+      text-align: left;
+      margin: 0 auto 60px auto;
+    };
+    img{
+      max-width: 100%;
+    }
+  }
+  h3{
+    color: #fff;
+    @include fontL(pc);
+    @include fontL(pad_h);
+    @include fontL(phone);
+  }
+  p{
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 35px 0;
+  }
+  .appInfor{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @include setMediaQueries(phone) {
+      width: calc(100vw - 16vw);
+    }
+    .appDL{
+      width: 80px;
+      float: left;
+      display: block;
+      overflow: hidden;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+        background: #000;
+        @include roundedBox(100%);
+        @include setMediaQueries(phone) {
+          display: block;
+        }
+      }
+      &:first-child{
+        margin-right: 20px;
+        @include setMediaQueries(phone) {
+          margin-right: 4%;
+        }
+      }
+    }
+    .supportA, .supportB{
+      float: left;
+    }
+    .supportA{
+      width: 80px;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+    .supportB{
+      color: #fff;
+      font-size: 15px;
+      line-height: 18px;
+      width: calc(100% - 260px);
+      margin: 31px 0 0 0;
+      @include setMediaQueries(pad_v) {
+        margin: 30px 0 0 0;
+      };
+      @include setMediaQueries(phone) {
+        width: calc(100% - 73%);
+      };
+    }
+  }
+  .animate.animation.left{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .animate.right{
+    position: relative;
+    opacity: 0;
+    *margin:0 15% 0 50%;
+    -webkit-transform: translateX(30vw);
+    transform: translateX(30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(pad_h) {
+      *margin: 0 5% 0 50%;
+    };
+    @include setMediaQueries(phone) {
+      *width: 84%;
+      *margin: 0 auto;
+    }
+  }
+  .animate.animation.right{
+    left: 0;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+// :root .tutorABCJr .appInfor .appDL{
+//   max-height: 80px;
+//   // @include setMediaQueries(phone) {
+//   //   height: auto;
+//   // }
+// }
+/* Test Trainer
+================================================== */
+.testTrainer{
+  background: url(../images/bg-testTrainer.png)
+              left bottom #373a41 no-repeat;
+  padding:165px 50% 165px 20%;
+  *padding:165px 0;
+  *overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  @include setMediaQueries(1500px) {
+    padding:150px 45% 150px 15%;
+    *padding:150px 0;
+  };
+  @include setMediaQueries(pc) {
+    padding:150px 50% 150px 10%;
+    *padding:150px 0;
+  };
+  @include setMediaQueries(pad_v) {
+    padding:150px 50% 150px 7%;
+    *padding:150px 0;
+  };
+  @include setMediaQueries(phone) {
+    padding:435px 8% 100px 8%;
+    background: #373a41;
+    *padding:100px 0 0 0;
+    *margin-bottom: -120px;
+  };
+  .testTrainerPlace{
+    position: absolute;
+    top: -110px;
+  }
+  .testTrainerImg{
+    width: 60%;
+    position: absolute;
+    left: 45%;
+    top: -30px;
+    text-align: left;
+    opacity: 0;
+    -webkit-transform: translateX(30vw);
+    transform: translateX(30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(1500px) {
+      top: -10px;
+    };
+    @include setMediaQueries(pc) {
+      width: 80%;
+      left: 40%;
+    };
+    @include setMediaQueries(pad_v) {
+      top: 60px;
+      left: 43%;
+      -webkit-transform: translateX(-30vw);
+      transform: translateX(-30vw);
+    };
+    @include setMediaQueries(phone) {
+      width: 160%;
+      left: 4%;
+      *left: 40px;
+      *position: relative;
+      top: 60px;
+      *top:-30px;
+    };
+    img{
+      max-width: 100%;
+    }
+  }
+  h3{
+    color: $purple;
+    @include fontL(pc);
+    @include fontL(pad_h);
+    @include fontL(phone);
+  }
+  p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 35px 0;
+    @include setMediaQueries(phone) {
+      padding-right: 25%;
+    };
+    @include setMediaQueries(580px) {
+      padding-right: 0;
+    };
+  }
+  .appInfor{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @include setMediaQueries(phone) {
+      width: calc(100vw - 16vw);
+    }
+    .appDL{
+      width: 80px;
+      float: left;
+      display: block;
+      overflow: hidden;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+        background: #000;
+        @include roundedBox(100%);
+        @include setMediaQueries(phone) {
+          display: block;
+        }
+      }
+      &:first-child{
+        margin-right: 20px;
+        @include setMediaQueries(phone) {
+          margin-right: 4%;
+        }
+      }
+    }
+    .supportA, .supportB{
+      float: left;
+    }
+    .supportA{
+      width: 80px;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+    .supportB{
+      color: #fff;
+      font-size: 15px;
+      line-height: 18px;
+      width: calc(100% - 260px);
+      margin: 31px 0 0 0;
+      @include setMediaQueries(pad_v) {
+        margin: 30px 0 0 0;
+      };
+      @include setMediaQueries(phone) {
+        width: calc(100% - 73%);
+      };
+    }
+  }
+  .animate.animation.left{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .animate.right{
+    position: relative;
+    opacity: 0;
+    *margin:0 55% 0 15%;
+    -webkit-transform: translateX(-30vw);
+    transform: translateX(-30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(pad_h) {
+      *margin: 0 55% 0 5%;
+    };
+    @include setMediaQueries(pad_v) {
+      -webkit-transform: translateX(30vw);
+      transform: translateX(30vw);
+    };
+    @include setMediaQueries(phone) {
+      *top:-200px;
+      *width: 84%;
+      *margin: 0 auto;
+    }
+  }
+  .animate.animation.right{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+// :root .testTrainer .appInfor .appDL{
+//   max-height: 80px;
+//   // @include setMediaQueries(phone) {
+//   //   height: auto;
+//   // }
+// }
+
+/* Archives
+================================================== */
+.archives{
+  background: #2C3761;
+  padding:310px 45% 310px 20%;
+  *padding:310px 0 310px 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  @include setMediaQueries(1500px) {
+    padding:265px 45% 265px 15%;
+    *padding:150px 0;
+  };
+  @include setMediaQueries(pc) {
+    padding:150px 50% 150px 10%;
+    *padding:150px 0;
+  };
+  @include setMediaQueries(pad_v) {
+    padding:150px 45% 180px 7%;
+    *padding:150px 0;
+  };
+  @include setMediaQueries(767px) {
+    padding:150% 8% 200px 8%;
+    *padding:50px 0 0 0;
+  };
+  .archivesPlace{
+    position: absolute;
+    top: -120px;
+    @include setMediaQueries(pc) {
+      top: -140px;
+    }
+    @include setMediaQueries(pad_v) {
+      top: -100px;
+    }
+  }
+  .archivesBG{
+    background: url(../images/bg-archives.png) no-repeat;
+    background: url(../images/bg-archivesM.png) repeat\0;
+    *background: url(../images/bg-archivesM.png) repeat;
+    @include fullBG;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include setMediaQueries(pad_v) {
+      background:url(../images/bg-archives.png) no-repeat;
+      background:url(../images/bg-archivesM.png) repeat\0;
+      *background:url(../images/bg-archivesM.png) repeat;
+    }
+    @include setMediaQueries(767px) {
+      background:url(../images/bg-archivesM.png) no-repeat;
+      background:url(../images/bg-archivesS.png) repeat\0;
+      *background:url(../images/bg-archivesS.png) repeat;
+    }
+  }
+  .archivesImg{
+    width: 58%;
+    position: absolute;
+    left: 40%;
+    bottom: -125px;
+    text-align: left;
+    opacity: 0;
+    -webkit-transform: translateX(30vw);
+    transform: translateX(30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(1500px) {
+      width: 64%;
+    }
+    @include setMediaQueries(pc) {
+      width: 70%;
+      left: 35%;
+      bottom: -180px;
+    };
+    @include setMediaQueries(1100px) {
+      width: 70%;
+      left: 35%;
+      bottom: -120px;
+    };
+    @include setMediaQueries(pad_v) {
+      bottom: -80px;
+      left: 36%;
+      -webkit-transform: translateX(-30vw);
+      transform: translateX(-30vw);
+    };
+    @include setMediaQueries(800px) {
+      width: 90%;
+      bottom: 30px;
+      left: 30%;
+      -webkit-transform: translateX(-30vw);
+      transform: translateX(-30vw);
+    };
+    @include setMediaQueries(767px) {
+      width: 100%;
+      left: 4%;
+      *left: 40px;
+      *position: relative;
+      top: -70px;
+      *top:-30px;
+      bottom:auto;
+    };
+    img{
+      max-width: 100%;
+    }
+  }
+  h3{
+    color: $greenLight;
+    @include fontL(pc);
+    @include fontL(pad_h);
+    @include fontL(phone);
+  }
+  p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 35px 0;
+    @include setMediaQueries(phone) {
+      padding-right: 25%;
+    };
+    @include setMediaQueries(580px) {
+      padding-right: 0;
+    };
+  }
+  .appInfor{
+    width: 100%;
+    height: auto;
+    // overflow: hidden;
+    @include setMediaQueries(phone) {
+      width: calc(100vw - 16vw);
+    }
+    .appDL{
+      width: 80px;
+      float: left;
+      display: block;
+      overflow: hidden;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+        background: #000;
+        @include roundedBox(100%);
+        @include setMediaQueries(phone) {
+          display: block;
+        }
+      }
+      &:first-child{
+        margin-right: 20px;
+        @include setMediaQueries(phone) {
+          margin-right: 4%;
+        }
+      }
+    }
+    .supportA, .supportB{
+      float: left;
+    }
+    .supportA{
+      width: 80px;
+      @include setMediaQueries(phone) {
+        width: 23%;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+    .supportB{
+      color: #fff;
+      font-size: 15px;
+      line-height: 18px;
+      width: calc(100% - 260px);
+      margin: 31px 0 0 0;
+      @include setMediaQueries(pad_v) {
+        margin: 30px 0 0 0;
+      };
+      @include setMediaQueries(phone) {
+        width: calc(100% - 73%);
+      };
+    }
+  }
+  .animate.animation.left{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .animate.right{
+    position: relative;
+    opacity: 0;
+    *margin:0 45% 0 15%;
+    -webkit-transform: translateX(-30vw);
+    transform: translateX(-30vw);
+    @include transition(0.5s);
+    @include setMediaQueries(pad_h) {
+      *margin: 0 45% 0 5%;
+    };
+    @include setMediaQueries(pad_v) {
+      -webkit-transform: translateX(30vw);
+      transform: translateX(30vw);
+    };
+    @include setMediaQueries(phone) {
+      *top:-200px;
+      *width: 84%;
+      *margin: 0 auto;
+    }
+  }
+  .animate.animation.right{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.archives::before{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right:50%;
+    -webkit-transform: translate(-70%,0)rotate(-3.5deg);
+    -ms-transform: translate(-70%,0)rotate(-3.5deg);
+    transform: translate(-70%,0)rotate(-3.5deg);
+    display: block;
+    content: '';
+    width: 250vw;
+    height: 350px;
+    background: #2C3761;
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+/* Why
+================================================== */
+.why{
+  width: 100%;
+  background: $blue;
+  text-align: center;
+  padding: 140px 0 70px 0;
+  box-sizing: border-box;
+  @include setMediaQueries(phone) {
+    padding:65px 0 30px 0;
+  };
+  h2{
+    @include fontL(phone);
+    margin-bottom: 15px;
+    color:#fff;
+  }
+  p{
+    color: $yellowLight;
+    @include fontS(phone);
+    line-height: 25px;
+  }
+  .whyBox{
+    width: 80%;
+    margin: 70px auto;
+    @include setMediaQueries(1300px) {
+      width: 95%;
+    };
+    @include setMediaQueries(pad_v) {
+      margin: 70px auto 0 auto;
+    };
+    @include setMediaQueries(phone) {
+      margin: 35px auto 0 auto;
+    };
+    div{
+      width: 24%;
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 25px 10px;
+      *padding: 0;
+      vertical-align: top;
+      *float: left;
+      @include setMediaQueries(phone) {
+        width: 100%;
+        margin-bottom: 10px;
+        *padding: 20px 0;
+      };
+      img{
+        margin-bottom: 35px;
+        @include setMediaQueries(phone) {
+          margin-bottom: 25px;
+          width: 20%;
+        };
+      }
+      p{
+        color: #fff;
+        font-size: 26px;
+        line-height: 26px;
+        min-height: 5vh;
+        *min-height: 25px;
+        @include setMediaQueries(phone) {
+          margin-bottom: 0;
+        };
+        span.small{
+          font-size: 16px;
+          display: block;
+          line-height: 22px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* Feedback
+================================================== */
+.feedback{
+  width: 100%;
+  background: #fff;
+  clear: both;
+  position: relative;
+  .feedbackImg{
+    text-align: center;
+    background: url(../images/photo-beautygirl.png) no-repeat;
+    *background: url(../images/photo-beautygirlS.png) no-repeat;
+    background: url(../images/photo-beautygirlS.png) no-repeat\0;
+    @include fullBG;
+    background-position: bottom right;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+    @include setMediaQueries(pad_h) {
+      position: relative;
+      background-position: 0 30%;
+      *padding: 100px 0;
+      //*background: url(../images/photo-beautygirlSS.png) no-repeat;
+      *background-position: -180px right;
+    };
+    @include setMediaQueries(phone) {
+      *background: url(../images/photo-beautygirlSS.png) no-repeat;
+      background: url(../images/photo-beautygirlSS.png) no-repeat\0;
+      *background-position: -100px right;
+    };
+    p{
+      color: #fff;
+      font-size: 40px;
+      line-height: 74px;
+      letter-spacing: 32px;
+      text-align: center;
+      padding:40px 40px 40px 72px;
+      border:6px solid #fff;
+      display: inline-block;
+      margin-top: 275px;
+      *width: 60%;
+      @include setMediaQueries(pad_h) {
+        margin: 70px 0;
+        font-size: 30px;
+        padding:30px 35px 30px 67px;
+        line-height: 64px;
+        *width: 40%;
+      };
+      @include setMediaQueries(phone) {
+        margin: 100px 0;
+        font-size: 24px;
+        padding:20px 17px 20px 37px;
+        line-height: 50px;
+        letter-spacing: 20px;
+      };
+    }
+  }
+  .suggestion{
+    padding: 80px 110px 50px 110px;
+    text-align: center;
+    margin-left: 50%;
+    @include setMediaQueries(1320px) {
+      padding: 80px 70px 50px 70px;
+    };
+    @include setMediaQueries(pad_h) {
+      margin-left: 0%;
+      padding: 70px 20% 50px 20%;
+    };
+    @include setMediaQueries(phone) {
+      margin-left: 0%;
+      padding: 70px 10% 50px 10%;
+      *padding: 0px 10% 70px 10%;
+    };
+    h3{
+      color:$greyDark;
+      margin-bottom: 15px;
+      @include setMediaQueries(1320px) {
+        font-size: 40px;
+      };
+      @include fontL(pad_h);
+      @include fontL(phone);
+    }
+    p{
+      @include fontSS(pad_h);
+      color:#677074;
+      margin-bottom: 45px;
+      line-height: 22px;
+      a{
+        color: #677074;
+        border-bottom: 1px solid #677074;
+      }
+    }
+    input,textarea,button{
+      width: 100%;
+      *width:99%;
+      margin-bottom: 10px;
+      -webkit-appearance: none;
+      @include roundedBox(5px);
+      @include fontSS(pad_h);
+    }
+    input,textarea{
+      color: #bcbcbc;
+      border: solid 1px #d7d7d7;
+    }
+    input{
+      height: 50px;
+      padding: 0 15px;
+      *padding: 0;
+      line-height: 50px;
+    }
+    textarea{
+      height: 140px;
+      padding: 15px;
+      *padding: 15px 0;
+    }
+    button{
+      text-align: center;
+      height: 55px;
+      border: 0;
+      color: #fff;
+      background: $blueLight;
+      cursor: pointer;
+    }
+    .codes{
+      *width: 99%;
+      .codeA{
+        width: 45%;
+        @include setMediaQueries(phone) {
+          width: 100%;
+        };
+      }
+      .codeB{
+        width: 35%;
+        @include setMediaQueries(phone) {
+          width: 50%;
+        };
+      }
+      .codeC{
+        width: 20%;
+        @include setMediaQueries(phone) {
+          width: 50%;
+          *width: 49%;
+        };
+      }
+      div{
+        float: left;
+        img{
+          width: 90%;
+          height: 50px;
+          margin-bottom: 10px;
+          @include setMediaQueries(phone) {
+            width: 100%;
+          };
+        }
+        button{
+          width: auto;
+          height: 30px;
+          color: $blueLight;
+          background: transparent;
+          @include roundedBox(0);
+          border-bottom: 1px solid $blueLight;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+/* FooterAd
+================================================== */
+.footerAd{
+  width: 100%;
+  background: url(../images/photo-classroom.png);
+  background-repeat: no-repeat;
+  *background-repeat: repeat-x;
+  background-repeat: repeat-x\9;
+  background-position: center;
+  clear: both;
+  @include fullBG;
+  color: #fff;
+  height: 600px;
+  position: relative;
+  @include setMediaQueries(pad_h) {
+    height: 360px;
+  };
+  div{
+    position: absolute;
+    top: 50%;
+    *top: 40%;
+    top: 40%\0;
+    @include transform(translateY(-50%));
+    width: 100%;
+    text-align: center;
+    h3{
+      margin-bottom: 12px;
+      @include setMediaQueries(1320px) {
+        font-size: 40px;
+      };
+      @include fontL(pad_h);
+      @include fontL(phone);
+    }
+    p{
+      @include fontS(phone);
+    }
+  }
+}
+:root .footerAd div{top:50%;}
+
+/* Footer
+================================================== */
+footer{
+  width: 100%;
+  background: $blackLight;
+  *overflow: hidden;
+  *float: left;
+  .footer{
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 450px;
+    *height: 320px;
+    position: relative;
+    padding: 70px 50px;
+    font-size: 13px;
+    @include setMediaQueries(pad_h) {
+      font-size: 15px;
+      padding: 70px 80px;
+    };
+    @include setMediaQueries(phone) {
+      font-size: 18px;
+      padding: 50px 0;
+      height: auto;
+    };
+    div{
+      position: absolute;
+      width: 240px;
+      @include setMediaQueries(pad_h) {
+        width: 20%;
+      };
+      @include setMediaQueries(phone) {
+        position: relative;
+        margin: 0 auto;
+        width: auto;
+      };
+    }
+    .logoFooter{
+      top: 70px;
+      left: 50px;
+      width: 180px;
+      @include setMediaQueries(pad_h) {
+        width: 200px;
+      };
+      @include setMediaQueries(phone) {
+        top: auto;
+        left: auto;
+        width: 40%;
+        margin-bottom: 70px;
+      };
+      img{
+        max-width: 100%;
+      }
+    }
+    .social{
+      bottom: 70px;
+      left: 50px;
+      width: 175px;
+      text-align: center;
+      @include setMediaQueries(pad_h) {
+        width: 200px;
+      };
+      @include setMediaQueries(phone) {
+        bottom: auto;
+        left: auto;
+        width: 50%;
+      };
+      a{
+        width: 24%;
+        *width:25%;
+        display: inline-block;
+        vertical-align: middle;
+        &:first-child{
+          width: 19%;
+        }
+      }
+      p{
+        margin-top: 20px;
+        font-family: Montserrat-Light;
+        @include setMediaQueries(phone) {
+          font-size: 14px;
+          margin-bottom: 50px;
+        };
+      }
+    }
+    .footerA, .footerB, .footerC{
+      @include setMediaQueries(phone) {
+        text-align: center;
+        margin-bottom: 30px;
+      };
+      p{
+        color: #818aa0;
+        line-height: 20px;
+        padding: 13px 0;
+        font-size: 15px;
+      }
+      a{
+        color: #fff;
+        font-size: 15px;
+      }
+    }
+    .footerA{
+      right: 480px;
+      @include setMediaQueries(pad_h) {
+        right: 40%;
+      };
+      @include setMediaQueries(phone) {
+        right: auto;
+      };
+    }
+    .footerB{
+      right: 240px;
+      @include setMediaQueries(pad_h) {
+        right: 25%;
+      };
+      @include setMediaQueries(phone) {
+        right: auto;
+      };
+    }
+    .footerC{
+      right: 0;
+      @include setMediaQueries(pad_h) {
+        right: 20px;
+      };
+      @include setMediaQueries(phone) {
+        right: auto;
+      };
+    }
+  }
+}

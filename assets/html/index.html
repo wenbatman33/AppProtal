@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--link(rel='icon', type='image/ico', href='assets/images/favicon.ico')-->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/action.js"></script>
+    <!--Video-->
+    <script src="assets/js/video/jquery.mb.YTPlayer.js"></script>
+    <script src="assets/js/video/device.min.js"></script>
+    <script src="assets/js/video/custom.js"></script>
+    <!--Slicknav-->
+    <script src="assets/js/slicknav/modernizr2.6.2.min.js"></script>
+    <script src="assets/js/slicknav/jquery.slicknav.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#menu').slicknav();
+      });
+      
+    </script>
+    <!--Action-->
+    <script src="assets/js/action/effects-core.min.js"></script>
+    <script src="assets/js/action/jquery.fadethis.js"></script>
+  </head>
+  <body>
+    <div class="loading"></div>
+    <nav class="nav">
+      <div class="navCon">
+        <div class="logo"><a href=""><img src="assets/images/logo.png"></a></div>
+        <div id="menu" class="navMain"><a href="javascript:void(0)" class="navbtnA">
+            <p>英文學習報</p></a><a href="javascript:void(0)" class="navbtnB">
+            <p>New TutorMobile</p></a><a href="javascript:void(0)" class="navbtnC">
+            <p>New TutorABCjr 英文小學堂</p></a><a href="javascript:void(0)" class="navbtnD">
+            <p>英檢考試專家 Test Trainer</p></a><a href="javascript:void(0)" class="navbtnE">
+            <p>App使用建議</p></a></div>
+      </div>
+    </nav>
+    <div class="content">
+      <section class="kv">
+        <div class="main">
+          <h1>
+            <p>行動學習帶著走</p>
+            <p>隨時隨地 隨選學習</p>
+          </h1>
+          <div class="ii">
+            <svg width="100px" height="100px" viewbox="750 396 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="PLAY-BUTTON" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(750.000000, 396.000000)">
+                <path id="Oval-34" d="M50,100 C77.6142375,100 100,77.6142375 100,50 C100,22.3857625 77.6142375,0 50,0 C22.3857625,0 0,22.3857625 0,50 C0,77.6142375 22.3857625,100 50,100 Z" fill="#0B103B" opacity="0.380422108"></path>
+                <circle id="Oval-34" fill="#3A84FF" cx="50" cy="50" r="41.6666667"></circle>
+                <polygon id="Page-1" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="40 34.9793033 66.5576923 50.8224364 40 66.6666667"></polygon>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="mouse">
+          <div class="mouseBody"></div><i class="material-icons">expand_more</i>
+        </div>
+        <div class="pattern"></div>
+        <section class="big-background"><a id="bgndVideo" data-property="{videoURL:'https://www.youtube.com/watch?v=1AtjOKph7-k',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}" class="player"></a></section>
+      </section>
+      <section class="ourApp">
+        <h2>我們的APP</h2>
+        <p>隨時拿出手機、平板學英語，一點一滴累積實力</p>
+        <div class="clickDown"><a href="javascript:void(0)" class="navbtnAs"><img src="assets/images/iconEpaper.png">
+            <p>英文學習報</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+              <div class="circle"></div></span></a><a href="javascript:void(0)" class="navbtnBs"><img src="assets/images/iconTutormobile.png">
+            <p>New TutorMobile</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+              <div class="circle"></div></span></a><a href="javascript:void(0)" class="navbtnCs"><img src="assets/images/iconJr.png">
+            <p>New TutorABCjr <span>英語小學堂</span></p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+              <div class="circle"></div></span></a><a href="javascript:void(0)" class="navbtnDs"><img src="assets/images/iconTestTrainer.png">
+            <p>Test Trainer <span>英檢考試專家</span></p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+              <div class="circle"></div></span></a></div>
+      </section>
+      <section class="clock">
+        <h2>利用零碎時間學好英語</h2>
+        <p class="littleTitle">隨時拿出手機、平板學英語，一點一滴累積實力</p>
+        <div class="clockFace">
+          <div id="sec"></div>
+          <div id="min"></div>
+          <div id="hour"></div>
+          <p class="timeA">AM 12:30<br>午休時間</p>
+          <p class="timeB">PM 14:25<br>出差途中</p>
+          <p class="timeC">PM 15:00<br>飛機上</p>
+          <p class="timeD">PM 17 :10<br>捷運上</p>
+          <p class="timeE">PM 18:30<br>煮水餃</p>
+          <p class="timeF">AM 7:45<br>吃早餐</p>
+          <p class="timeG">AM 8:30<br>通勤中</p>
+          <p class="timeH">AM 10:00<br>會議空檔</p>
+          <p class="timeI">PM 23:00<br>睡前</p>
+        </div>
+      </section>
+      <!-- Epaper-->
+      <section class="epaper">
+        <div class="epaperImg animate left"><img src="assets/images/mockup-egpaper.png"></div>
+        <div class="animate right">
+          <h3>英文學習報</h3>
+          <p>TutorABC提供免費行動學習英文App，超過100篇以上真人導讀文章與影片，並搭配時事相關主題，讓您在任何時間、任何地點，學習不間斷。</p>
+          <div class="appInfor"><a href="" class="appDL"><img src="assets/images/apple.png"></a><a href="" class="appDL"><img src="assets/images/android.png"></a>
+            <div class="supportA"><img src="assets/images/deviceWhite.png"></div>
+            <div class="supportB">支援手機與平板</div>
+          </div>
+        </div>
+      </section>
+      <!-- TutorMobile-->
+      <section class="tutormobile">
+        <div class="tutormobileImg animate left"><img src="assets/images/mockup-tutormobile.png"></div>
+        <div class="animate right">
+          <h3>New TutorMobile</h3>
+          <p>TutorMobile App全新設計、讓你在平板上隨時隨地訂課、上課。 最輕鬆的真人互動教學，學英語從未如此有效。</p>
+          <div class="appInfor"><a href="" class="appDL"><img src="assets/images/apple.png"></a><a href="" class="appDL"><img src="assets/images/android.png"></a>
+            <div class="supportA"><img src="assets/images/deviceBlack.png"></div>
+            <div class="supportB">支援手機與平板</div>
+          </div>
+        </div>
+      </section>
+      <!-- TutorABCJr-->
+      <section class="tutorABCJr">
+        <div class="tutorABCJrImg animate left"><img src="assets/images/mockup-tutorABCJr.png"></div>
+        <div class="animate right">
+          <h3>New TutorABCJr<br>英語小學堂</h3>
+          <p>TutorABCJr運用「動態課程生成系統（DCGS）」專利，為每位國小生、國中生、高中生提供量身訂做學習內容，讓學生能針對升學英文與生活英文做全方位的學習。</p>
+          <div class="appInfor"><a href="" class="appDL"><img src="assets/images/apple.png"></a><a href="" class="appDL"><img src="assets/images/android.png"></a>
+            <div class="supportA"><img src="assets/images/deviceWhiteOne.png"></div>
+            <div class="supportB">支援平板</div>
+          </div>
+        </div>
+      </section>
+      <!-- Test Trainer-->
+      <section class="testTrainer">
+        <div class="testTrainerImg animate left"><img src="assets/images/mockup-testTrainer.png"></div>
+        <div class="animate right">
+          <h3>英檢考試專家<br>Test Trainer</h3>
+          <p>IELTS、TOEFL、GMAT英檢考試專家提供最專業的考試課程，每日開課學習不間斷，上課前簡訊貼心提醒，帶你抓住所有英檢的聽、說、讀、寫考試重點。</p>
+          <div class="appInfor"><a href="" class="appDL"><img src="assets/images/apple.png"></a><a href="" class="appDL"><img src="assets/images/android.png"></a>
+            <div class="supportA"><img src="assets/images/deviceWhiteTwo.png"></div>
+            <div class="supportB">支援手機</div>
+          </div>
+        </div>
+      </section>
+      <!-- Why-->
+      <section class="why">
+        <h2>為什麼選擇TutorABC?</h2>
+        <p>四大特色，幫助學習者輕鬆提升英語力</p>
+        <div class="whyBox">
+          <div><img src="assets/images/whyA.png">
+            <p>全球外師<span class="small">5000+專業外籍英美系顧問</span></p>
+          </div>
+          <div><img src="assets/images/whyB.png">
+            <p>方便省時<span class="small">365X24，在家遊學全世界</span></p>
+          </div>
+          <div><img src="assets/images/whyC.png">
+            <p>快速有效<span class="small">DCGS量身打造，符合個人需要</span></p>
+          </div>
+          <div><img src="assets/images/whyD.png">
+            <p>大膽開口<span class="small">單向視訊，加強口說信心</span></p>
+          </div>
+        </div>
+      </section>
+      <!-- Feedback-->
+      <section id="feedback" class="feedback">
+        <article class="feedbackImg">
+          <p>USER<br>FIRST</p>
+        </article>
+        <article class="suggestion">
+          <h3>我們重視您的建議</h3>
+          <p>請提供任何建議與回饋，我們將予以回覆，並將您的想法納入優化項目</p>
+          <input type="text" placeholder="您的姓名">
+          <input type="text" placeholder="電子信箱">
+          <textarea type="text" placeholder="您的建議"></textarea>
+          <button>送出</button>
+        </article>
+      </section>
+      <!-- AD-->
+      <section class="footerAd">
+        <div>
+          <h3>隨時隨地 提升英語力</h3>
+          <p>善用工具，手機和平板幫助你打開英文學習途徑</p>
+        </div>
+      </section>
+      <!-- Footer-->
+      <footer>
+        <div class="footer">
+          <div class="logoFooter"><img src="assets/images/logo.png"></div>
+          <div class="social"><a href=""><img src="assets/images/social-fb.png"></a><a href=""><img src="assets/images/social-twitter.png"></a><a href=""><img src="assets/images/social-google.png"></a><a href=""><img src="assets/images/social-instagram.png"></a>
+            <p class="copyright">Copyright © 2015 TutorABC</p>
+          </div>
+          <div class="footerA">
+            <p>官方網站</p>
+            <p> <a href="">iTutorGroup</a></p>
+            <p> <a href="">vipabc</a></p>
+            <p><a href="">vipabc青少年</a></p>
+            <p><a href="">TutorABC</a></p>
+            <p><a href="">TutorABCjr</a></p>
+            <p><a href="">TutorMing</a></p>
+          </div>
+          <div class="footerB">
+            <p>App應用</p>
+            <p> <a href="">英語學習報</a></p>
+            <p> <a href="">New TutorMobile</a></p>
+            <p><a href="">New TutorABCJr 英語小學堂</a></p>
+            <p><a href="">雅思托福 TestTrainer</a></p>
+          </div>
+          <div class="footerC">
+            <p>其他</p>
+            <p><a href="">App 使用回饋與建議</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<script>
+  $(document).ready(function() {
+  	$('.slicknav_btn').click(function(){
+      //$('span').toggleClass('slicknav_icon');
+  		$('span').toggleClass('slicknav_icon_open');
+  	});
+  });
+</script>

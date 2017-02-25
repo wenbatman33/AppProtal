@@ -1,0 +1,95 @@
+html, body {
+  font-family: 'Quicksand', sans-serif;
+  background: #000;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* TutorABCJr
+================================================== */
+.tutorABCJr {
+  background: url(../images/bg-tjr.png) right bottom #42b53a no-repeat;
+  padding: 165px 17.5% 165px 52.5%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.tutorABCJr .tutorABCJrImg {
+  width: 57%;
+  position: absolute;
+  right: 57.5%;
+  top: 80px;
+  text-align: right;
+  opacity: 0;
+}
+
+.tutorABCJr .tutorABCJrImg img {
+  max-width: 100%;
+}
+
+.tutorABCJr h3 {
+  color: #fff;
+}
+
+.tutorABCJr p {
+  color: #000;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 35px 0;
+}
+
+.tutorABCJr .appInfor {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.tutorABCJr .appInfor .appDL {
+  width: 80px;
+  float: left;
+  display: block;
+  overflow: hidden;
+}
+
+.tutorABCJr .appInfor .appDL img {
+  max-width: 100%;
+  background: #000;
+}
+
+.tutorABCJr .appInfor .appDL:first-child {
+  margin-right: 20px;
+}
+
+.tutorABCJr .appInfor .supportA, .tutorABCJr .appInfor .supportB {
+  float: left;
+}
+
+.tutorABCJr .appInfor .supportA {
+  width: 80px;
+}
+
+.tutorABCJr .appInfor .supportA img {
+  max-width: 100%;
+}
+
+.tutorABCJr .appInfor .supportB {
+  color: #fff;
+  font-size: 15px;
+  line-height: 18px;
+  width: calc(100% - 260px);
+  margin: 31px 0 0 0;
+}
+
+/* Test Trainer
+================================================== */
+/* Why
+================================================== */
+/* Feedback
+================================================== */
+/* FooterAd
+================================================== */
+/* Footer
+================================================== */
