@@ -1,449 +1,555 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TutorABC真人線上.即時互動.英語視訊學習系統</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=0">
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Ielts,Toeic,外籍老師,多益,托福,英語教學,英文會話,英文補習,英文檢定,商用英文,雅思,多益,托福,補英文,線上學習,學英文,英文翻譯,遊學,一對一,線上美語,真人視訊,Tutor,online,英文家教,真人互動">
-    <meta name="description" content="TutorABC提供線上真人即時互動英語視訊學習網站、專業外籍英語顧問，精準追蹤學習成效的客製化線上英語課程服務。全年365天、24小時，隨時隨地輕鬆線上學習英語，有效提升英語力">
-    <!--link(rel='icon', type='image/ico', href='assets/images/favicon.ico')-->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/action.js"></script>
-    <script src="assets/js/browser.js"></script>
-    <!--IE 9-->
-    <script src="assets/js/css3-mediaqueries.js"></script>
-    <script src="assets/js/jquery.placeholder.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('input, textarea').placeholder();
-      });
-      
-    </script>
-    <!--Slicknav-->
-    <script src="assets/js/slicknav/modernizr2.6.2.min.js"></script>
-    <script src="assets/js/slicknav/jquery.slicknav.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('#menu').slicknav();
-      });
-      
-    </script>
-    <!--Action-->
-    <script src="assets/js/action/effects-core.min.js"></script>
-    <script src="assets/js/action/jquery.fadethis.js"></script>
-  </head>
-  <body>
-    <div class="content">
-      <div class="loading"></div>
-      <nav class="nav">
-        <div class="navCon">
-          <div class="logo"><a href="http://www.tutorabc.com/OfficialSite/zh-TW"><img src="assets/images/logo.png"></a></div>
-          <div id="menu" class="navMain"><a href="javascript:void(0)" class="navbtnA">
-              <p>英文學習報</p></a><a href="javascript:void(0)" class="navbtnB">
-              <p>TutorMobile</p></a><a href="javascript:void(0)" class="navbtnC">
-              <p>TutorABCJr</p></a><a href="javascript:void(0)" class="navbtnD">
-              <p>英檢考試專家 Test Trainer</p></a><a href="javascript:void(0)" class="navbtnE">
-              <p>銀河征戰 Galaxy Battle</p></a></div>
-        </div>
-      </nav>
-      <section class="kv">
-        <div class="main">
-          <h1>
-            <p>行動學習帶著走</p>
-            <p class="ieSize">隨時隨地 隨選學習</p>
-          </h1>
-        </div>
-        <div class="mouse">
-          <div class="mouseBody"></div><i class="material-icons">expand_more</i>
-        </div>
-        <div class="pattern"></div>
-        <section id="imgs" class="gallery">
-          <div style="background-image:url(../assets/images/slider01.jpg);" class="bg"></div>
-          <div style="background-image:url(../assets/images/slider02.jpg);" class="bg"></div>
-          <div style="background-image:url(../assets/images/slider03.jpg);" class="bg"></div>
-        </section>
-      </section>
-      <section class="ourApp">
-        <h2>我們的APP</h2>
-        <p>隨時拿出手機、平板學英語，一點一滴累積實力</p>
-        <div class="clickDown"><a href="javascript:void(0)" class="navbtnAs"><img src="assets/images/iconEpaper.png">
-            <p>英文學習報</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
-              <div class="circle"></div></span></a><a href="javascript:void(0)" class="navbtnBs"><img src="assets/images/iconTutormobile.png">
-            <p>TutorMobile</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
-              <div class="circle"></div></span></a><a href="javascript:void(0)" class="navbtnCs"><img src="assets/images/iconJr.png">
-            <p>TutorABCJr
-            </p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
-              <div class="circle"></div></span></a><a href="javascript:void(0)" class="navbtnDs"><img src="assets/images/iconTestTrainer.png">
-            <p>Test Trainer <span>英檢考試專家</span></p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
-              <div class="circle"></div></span></a><a href="javascript:void(0)" class="navbtnEs"><img src="assets/images/iconArchives.png">
-            <p>銀河征戰</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
-              <div class="circle"></div></span></a></div>
-      </section>
-      <section class="clock">
-        <h2>利用零碎時間學好英語</h2>
-        <p class="littleTitle">隨時拿出手機、平板學英語，一點一滴累積實力</p>
-        <div class="clockFace">
-          <div id="sec"></div>
-          <div id="min"></div>
-          <div id="hour"></div>
-          <p class="timeA">AM 12:30<br>午休時間</p>
-          <p class="timeB">PM 14:25<br>出差途中</p>
-          <p class="timeC">PM 15:00<br>飛機上</p>
-          <p class="timeD">PM 17 :10<br>捷運上</p>
-          <p class="timeE">PM 18:30<br>煮水餃</p>
-          <p class="timeF">AM 7:45<br>吃早餐</p>
-          <p class="timeG">AM 8:30<br>通勤中</p>
-          <p class="timeH">AM 10:00<br>會議空檔</p>
-          <p class="timeI">PM 23:00<br>睡前</p>
-        </div>
-      </section>
-      <!-- Epaper-->
-      <section class="epaper">
-        <div class="epaperPlace"></div>
-        <div class="epaperImg animate left"><img src="assets/images/mockup-egpaper.png"></div>
-        <div class="animate right">
-          <h3>英文學習報</h3>
-          <p>TutorABC提供免費行動學習英文App，超過100篇以上真人導讀文章與影片，並搭配時事相關主題，讓您在任何時間、任何地點，學習不間斷。</p>
-          <div class="appInfor"><a href="https://itunes.apple.com/tw/app/ying-wen-xue-xi-bao/id512140723?l=zh&amp;mt=8" target="_blank" class="appDL appDLA">
-              <svg width="100%" height="100%" viewbox="0 0 80 80">
-                <g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <path id="apple" d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z" fill="#FFFFFF"></path>
-                </g>
-              </svg></a><a href="https://play.google.com/store/apps/details?id=com.wordhelpside" target="_blank" class="appDL appDLB">
-              <svg width="100%" height="100%" viewbox="99 0 81 80">
-                <defs>
-                  <lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop stop-color="#1E79AF" offset="0%"></stop>
-                    <stop stop-color="#63FFD3" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%" y2="96.5617838%">
-                    <stop stop-color="#DC4057" offset="0%"></stop>
-                    <stop stop-color="#9E36BB" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
-                    <stop stop-color="#FF9676" offset="0%"></stop>
-                    <stop stop-color="#FFD074" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
-                    <stop stop-color="#51C6AD" offset="0%"></stop>
-                    <stop stop-color="#D5FFA1" offset="100%"></stop>
-                  </lineargradient>
-                </defs>
-                <g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(99.046667, 0.000000)">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <g id="google-play" transform="translate(26.253333, 22.686567)">
-                    <path id="left" d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452" fill="url(#linearGradient-1)"></path>
-                    <path id="bottom" d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573" fill="url(#linearGradient-2)"></path>
-                    <path id="right" d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789" fill="url(#linearGradient-3)"></path>
-                    <path id="top" d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907" fill="url(#linearGradient-4)"></path>
-                  </g>
-                </g>
-              </svg></a>
-            <div class="supportA"><img src="assets/images/systemAll.png"></div>
-            <div class="supportB">支援手機與平板</div>
-          </div>
-        </div>
-      </section>
-      <!-- TutorMobile-->
-      <section class="tutormobile">
-        <div class="tutormobilePlace"></div>
-        <div class="tutormobileImg animate left"><img src="assets/images/mockup-tutormobile.png"></div>
-        <div class="animate right">
-          <h3>TutorMobile</h3>
-          <p>TutorMobile App全新設計、讓你在平板上隨時隨地訂課、上課。 最輕鬆的真人互動教學，學英語從未如此有效。</p>
-          <div class="appInfor"><a href="https://itunes.apple.com/tw/app/tutormobile/id1076884523?l=zh&amp;mt=8" target="_blank" class="appDL appDLA1">
-              <svg width="100%" height="100%" viewbox="0 0 80 80">
-                <g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <path id="apple" d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z" fill="#FFFFFF"></path>
-                </g>
-              </svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabc.tutormobile" target="_blank" class="appDL appDLB1">
-              <svg width="100%" height="100%" viewbox="99 0 81 80">
-                <defs>
-                  <lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop stop-color="#1E79AF" offset="0%"></stop>
-                    <stop stop-color="#63FFD3" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%" y2="96.5617838%">
-                    <stop stop-color="#DC4057" offset="0%"></stop>
-                    <stop stop-color="#9E36BB" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
-                    <stop stop-color="#FF9676" offset="0%"></stop>
-                    <stop stop-color="#FFD074" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
-                    <stop stop-color="#51C6AD" offset="0%"></stop>
-                    <stop stop-color="#D5FFA1" offset="100%"></stop>
-                  </lineargradient>
-                </defs>
-                <g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(99.046667, 0.000000)">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <g id="google-play" transform="translate(26.253333, 22.686567)">
-                    <path id="left" d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452" fill="url(#linearGradient-1)"></path>
-                    <path id="bottom" d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573" fill="url(#linearGradient-2)"></path>
-                    <path id="right" d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789" fill="url(#linearGradient-3)"></path>
-                    <path id="top" d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907" fill="url(#linearGradient-4)"></path>
-                  </g>
-                </g>
-              </svg></a>
-            <div class="supportA"><img src="assets/images/systemAllBlack.png"></div>
-            <div class="supportB">支援手機與平板</div>
-          </div>
-        </div>
-      </section>
-      <!-- TutorABCJr-->
-      <section class="tutorABCJr">
-        <div class="tutorABCJrPlace"></div>
-        <div class="tutorABCJrImg animate left"><img src="assets/images/mockup-tutorABCJr.png"></div>
-        <div class="animate right">
-          <h3>TutorABCJr
-          </h3>
-          <p>TutorABCJr運用「動態課程生成系統（DCGS）」專利，為每位國小生、國中生、高中生提供量身訂做學習內容，讓學生能針對升學英文與生活英文做全方位的學習。</p>
-          <div class="appInfor"><a href="https://itunes.apple.com/tw/app/tutorabcjr/id1111504215?l=zh&amp;mt=8" target="_blank" class="appDL appDLA2">
-              <svg width="100%" height="100%" viewbox="0 0 80 80">
-                <g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <path id="apple" d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z" fill="#FFFFFF"></path>
-                </g>
-              </svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabc.new.tutormobilejr" target="_blank" class="appDL appDLB2">
-              <svg width="100%" height="100%" viewbox="99 0 81 80">
-                <defs>
-                  <lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop stop-color="#1E79AF" offset="0%"></stop>
-                    <stop stop-color="#63FFD3" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%" y2="96.5617838%">
-                    <stop stop-color="#DC4057" offset="0%"></stop>
-                    <stop stop-color="#9E36BB" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
-                    <stop stop-color="#FF9676" offset="0%"></stop>
-                    <stop stop-color="#FFD074" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
-                    <stop stop-color="#51C6AD" offset="0%"></stop>
-                    <stop stop-color="#D5FFA1" offset="100%"></stop>
-                  </lineargradient>
-                </defs>
-                <g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(99.046667, 0.000000)">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <g id="google-play" transform="translate(26.253333, 22.686567)">
-                    <path id="left" d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452" fill="url(#linearGradient-1)"></path>
-                    <path id="bottom" d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573" fill="url(#linearGradient-2)"></path>
-                    <path id="right" d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789" fill="url(#linearGradient-3)"></path>
-                    <path id="top" d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907" fill="url(#linearGradient-4)"></path>
-                  </g>
-                </g>
-              </svg></a>
-            <div class="supportA"><img src="assets/images/systemPad.png"></div>
-            <div class="supportB">支援平板      </div>
-          </div>
-        </div>
-      </section>
-      <!-- Test Trainer-->
-      <section class="testTrainer">
-        <div class="testTrainerPlace"></div>
-        <div class="testTrainerImg animate left"><img src="assets/images/mockup-testTrainer.png"></div>
-        <div class="animate right">
-          <h3>英檢考試專家<br>Test Trainer</h3>
-          <p>IELTS、TOEFL、GMAT英檢考試專家提供最專業的考試課程，每日開課學習不間斷，上課前簡訊貼心提醒，帶你抓住所有英檢的聽、說、讀、寫考試重點。</p>
-          <div class="appInfor"><a href="https://itunes.apple.com/tw/app/ying-jian-kao-shi-zhuan-jiatest/id1054325678?l=zh&amp;mt=8" target="_blank" class="appDL appDLA3">
-              <svg width="100%" height="100%" viewbox="0 0 80 80">
-                <g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <path id="apple" d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z" fill="#FFFFFF"></path>
-                </g>
-              </svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabc.epictraining" target="_blank" class="appDL appDLB3">
-              <svg width="100%" height="100%" viewbox="99 0 81 80">
-                <defs>
-                  <lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop stop-color="#1E79AF" offset="0%"></stop>
-                    <stop stop-color="#63FFD3" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%" y2="96.5617838%">
-                    <stop stop-color="#DC4057" offset="0%"></stop>
-                    <stop stop-color="#9E36BB" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
-                    <stop stop-color="#FF9676" offset="0%"></stop>
-                    <stop stop-color="#FFD074" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
-                    <stop stop-color="#51C6AD" offset="0%"></stop>
-                    <stop stop-color="#D5FFA1" offset="100%"></stop>
-                  </lineargradient>
-                </defs>
-                <g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(99.046667, 0.000000)">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <g id="google-play" transform="translate(26.253333, 22.686567)">
-                    <path id="left" d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452" fill="url(#linearGradient-1)"></path>
-                    <path id="bottom" d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573" fill="url(#linearGradient-2)"></path>
-                    <path id="right" d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789" fill="url(#linearGradient-3)"></path>
-                    <path id="top" d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907" fill="url(#linearGradient-4)"></path>
-                  </g>
-                </g>
-              </svg></a>
-            <div class="supportA"><img src="assets/images/systemPhone.png"></div>
-            <div class="supportB">支援手機</div>
-          </div>
-        </div>
-      </section>
-      <!-- Archives-->
-      <section class="archives">
-        <div class="archivesPlace"></div>
-        <div class="archivesBG"></div>
-        <div class="archivesImg animate left">
-        </div>
-        <div class="animate right">
-          <h3>銀河征戰<br>Galaxy Battle</h3>
-          <p>還在用背單字、記文法的方式學英語，而犧牲學習樂趣嗎?以經典的銀河對戰遊戲為靈感，孩子可邀請同伴進行對戰，切磋實力!共有中翻英、單字拼字和聽力測驗三種玩法，一玩就上手!</p>
-          <div class="appInfor"><a href="https://itunes.apple.com/us/app/yin-he-zheng-zhan/id1079279133?l=zh&amp;ls=1&amp;mt=8" target="_blank" class="appDL appDLA4">
-              <svg width="100%" height="100%" viewbox="0 0 80 80">
-                <g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <path id="apple" d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z" fill="#FFFFFF"></path>
-                </g>
-              </svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabcjr.tjrrtg" target="_blank" class="appDL appDLB4">
-              <svg width="100%" height="100%" viewbox="99 0 81 80">
-                <defs>
-                  <lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop stop-color="#1E79AF" offset="0%"></stop>
-                    <stop stop-color="#63FFD3" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%" y2="96.5617838%">
-                    <stop stop-color="#DC4057" offset="0%"></stop>
-                    <stop stop-color="#9E36BB" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
-                    <stop stop-color="#FF9676" offset="0%"></stop>
-                    <stop stop-color="#FFD074" offset="100%"></stop>
-                  </lineargradient>
-                  <lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
-                    <stop stop-color="#51C6AD" offset="0%"></stop>
-                    <stop stop-color="#D5FFA1" offset="100%"></stop>
-                  </lineargradient>
-                </defs>
-                <g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(99.046667, 0.000000)">
-                  <ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
-                  <g id="google-play" transform="translate(26.253333, 22.686567)">
-                    <path id="left" d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452" fill="url(#linearGradient-1)"></path>
-                    <path id="bottom" d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573" fill="url(#linearGradient-2)"></path>
-                    <path id="right" d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789" fill="url(#linearGradient-3)"></path>
-                    <path id="top" d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907" fill="url(#linearGradient-4)"></path>
-                  </g>
-                </g>
-              </svg></a>
-            <div class="supportA"><img src="assets/images/systemPhone.png"></div>
-            <div class="supportB">支援手機</div>
-          </div>
-        </div>
-      </section>
-      <!-- Why-->
-      <section class="why">
-        <h2>為什麼選擇TutorABC?</h2>
-        <p>四大特色，幫助學習者輕鬆提升英語力</p>
-        <div class="whyBox">
-          <div><img src="assets/images/whyA.png">
-            <p>全球外師<span class="small">10000+專業全球顧問</span></p>
-          </div>
-          <div><img src="assets/images/whyB.png">
-            <p>方便省時<span class="small">365X24，在家遊學全世界</span></p>
-          </div>
-          <div><img src="assets/images/whyC.png">
-            <p>快速有效<span class="small">DCGS量身打造，符合個人需要</span></p>
-          </div>
-          <div><img src="assets/images/whyD.png">
-            <p>大膽開口<span class="small">單向視訊，加強口說信心</span></p>
-          </div>
-        </div>
-      </section>
-      <!-- AD-->
-      <section class="footerAd">
-        <div>
-          <h3>隨時隨地 提升英語力</h3>
-          <p>善用工具，手機和平板幫助你打開英文學習途徑</p>
-        </div>
-      </section>
-      <!-- Footer-->
-      <footer>
-        <div class="footer">
-          <div class="logoFooter"><img src="assets/images/logo.png"></div>
-          <div class="social"><a href="https://www.facebook.com/TutorABC.com.tw" target="_blank" class="socialFb">
-              <svg width="11px" height="22px" viewbox="0 0 11 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <path id="Shape" d="M2.33127472,22 L2.33127472,10.9986115 L0,10.9986115 L0,7.20790204 L2.33127472,7.20790204 L2.33127472,4.93208786 C2.33127472,1.83981318 3.64693756,0 7.38724013,0 L10.5003578,0 L10.5003578,3.79209796 L8.55465927,3.79209796 C7.09859254,3.79209796 7.00237668,4.3218253 7.00237668,5.31046453 L6.99596229,7.20790204 L10.5217391,7.20790204 L10.10908,10.9986115 L6.99596229,10.9986115 L6.99596229,22 L2.33127472,22 Z" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
-              </svg></a><a href="https://www.youtube.com/user/tutorabcmd" target="_blank" class="socialYT">
-              <svg width="26px" height="18px" viewbox="48 4 26 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <path id="Youtube" d="M57.9981,16.3193673 L57.9973125,9.12880437 L64.8060375,12.736482 L57.9981,16.3193673 Z M72.948,7.88279202 C72.948,7.88279202 72.7015125,6.11934065 71.9463,5.34278225 C70.9879125,4.32309948 69.9137625,4.31830097 69.421575,4.25911939 C65.89515,4 60.6055125,4 60.6055125,4 L60.5944875,4 C60.5944875,4 55.30485,4 51.778425,4.25911939 C51.28545,4.31830097 50.2120875,4.32309948 49.2529125,5.34278225 C48.4977,6.11934065 48.252,7.88279202 48.252,7.88279202 C48.252,7.88279202 48,9.9541476 48,12.0247034 L48,13.9664993 C48,16.0378549 48.252,18.1084107 48.252,18.1084107 C48.252,18.1084107 48.4977,19.8718621 49.2529125,20.6484205 C50.2120875,21.6681033 51.4713,21.6361132 52.032,21.7424801 C54.048,21.9392189 60.6,22 60.6,22 C60.6,22 65.89515,21.9920025 69.421575,21.7328831 C69.9137625,21.6729018 70.9879125,21.6681033 71.9463,20.6484205 C72.7015125,19.8718621 72.948,18.1084107 72.948,18.1084107 C72.948,18.1084107 73.2,16.0378549 73.2,13.9664993 L73.2,12.0247034 C73.2,9.9541476 72.948,7.88279202 72.948,7.88279202 L72.948,7.88279202 Z" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
-              </svg></a><a href="http://blog.tutorabc.com/blog/" target="_blank" class="socialBlog">
-              <svg width="40px" height="13px" viewbox="109 6 40 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <path id="BLOG" d="M117.474609,14.5898438 C117.474609,14.9941426 117.418946,15.3603499 117.307617,15.6884766 C117.196289,16.0166032 117.042481,16.3066394 116.846191,16.5585938 C116.649901,16.8105481 116.415529,17.0273428 116.143066,17.2089844 C115.870604,17.3906259 115.570314,17.5400385 115.242188,17.6572266 C114.914061,17.7744146 114.563967,17.8608396 114.191895,17.9165039 C113.819822,17.9721682 113.405276,18 112.948242,18 L109.924805,18 C109.731444,18 109.568848,17.9428717 109.437012,17.8286133 C109.305175,17.7143549 109.239258,17.5283216 109.239258,17.2705078 L109.239258,7.35644531 C109.239258,7.09863152 109.305175,6.91259823 109.437012,6.79833984 C109.568848,6.68408146 109.731444,6.62695312 109.924805,6.62695312 L112.78125,6.62695312 C113.478519,6.62695312 114.068845,6.68554629 114.552246,6.80273438 C115.035647,6.91992246 115.442869,7.09716678 115.773926,7.33447266 C116.104982,7.57177853 116.358398,7.8720685 116.53418,8.23535156 C116.709962,8.59863463 116.797852,9.02636473 116.797852,9.51855469 C116.797852,9.79394669 116.762696,10.0532214 116.692383,10.2963867 C116.62207,10.539552 116.519532,10.7607412 116.384766,10.9599609 C116.249999,11.1591807 116.084474,11.3349602 115.888184,11.4873047 C115.691894,11.6396492 115.467775,11.7626948 115.21582,11.8564453 C115.538088,11.9150394 115.835448,12.0175774 116.10791,12.1640625 C116.380372,12.3105476 116.617675,12.4995106 116.819824,12.730957 C117.021974,12.9624035 117.18164,13.2333969 117.298828,13.5439453 C117.416016,13.8544937 117.474609,14.2031231 117.474609,14.5898438 L117.474609,14.5898438 Z M114.486328,9.79980469 C114.486328,9.57128792 114.451172,9.36621185 114.380859,9.18457031 C114.310547,9.00292878 114.205079,8.85205138 114.064453,8.73193359 C113.923827,8.61181581 113.746583,8.51953157 113.532715,8.45507812 C113.318847,8.39062468 113.033205,8.35839844 112.675781,8.35839844 L111.506836,8.35839844 L111.506836,11.3115234 L112.798828,11.3115234 C113.132814,11.3115234 113.399413,11.2719731 113.598633,11.1928711 C113.797853,11.1137691 113.963378,11.0053718 114.095215,10.8676758 C114.227051,10.7299798 114.325195,10.5688486 114.389648,10.3842773 C114.454102,10.1997061 114.486328,10.0048838 114.486328,9.79980469 L114.486328,9.79980469 Z M115.075195,14.6689453 C115.075195,14.4052721 115.03125,14.1694346 114.943359,13.9614258 C114.855468,13.7534169 114.726563,13.5791023 114.556641,13.4384766 C114.386718,13.2978509 114.169923,13.1894535 113.90625,13.1132812 C113.642577,13.037109 113.299807,12.9990234 112.87793,12.9990234 L111.506836,12.9990234 L111.506836,16.2333984 L113.176758,16.2333984 C113.499025,16.2333984 113.770018,16.1997074 113.989746,16.1323242 C114.209474,16.0649411 114.399902,15.9653327 114.561035,15.8334961 C114.722169,15.7016595 114.848144,15.5375986 114.938965,15.3413086 C115.029786,15.1450185 115.075195,14.9208997 115.075195,14.6689453 L115.075195,14.6689453 Z M125.578125,17.0332031 C125.578125,17.2089853 125.570801,17.356933 125.556152,17.4770508 C125.541504,17.5971686 125.519531,17.6967769 125.490234,17.7758789 C125.460937,17.8549809 125.424317,17.9121092 125.380371,17.9472656 C125.336426,17.9824221 125.285157,18 125.226562,18 L120.014648,18 C119.821288,18 119.658692,17.9428717 119.526855,17.8286133 C119.395019,17.7143549 119.329102,17.5283216 119.329102,17.2705078 L119.329102,6.94335938 C119.329102,6.88476533 119.348144,6.83203148 119.38623,6.78515625 C119.424317,6.73828102 119.487304,6.70019546 119.575195,6.67089844 C119.663086,6.64160142 119.781738,6.61816415 119.931152,6.60058594 C120.080567,6.58300772 120.2666,6.57421875 120.489258,6.57421875 C120.717775,6.57421875 120.905273,6.58300772 121.051758,6.60058594 C121.198243,6.61816415 121.315429,6.64160142 121.40332,6.67089844 C121.491211,6.70019546 121.554199,6.73828102 121.592285,6.78515625 C121.630371,6.83203148 121.649414,6.88476533 121.649414,6.94335938 L121.649414,16.0927734 L125.226562,16.0927734 C125.285157,16.0927734 125.336426,16.1088866 125.380371,16.1411133 C125.424317,16.17334 125.460937,16.2260739 125.490234,16.2993164 C125.519531,16.372559 125.541504,16.4692377 125.556152,16.5893555 C125.570801,16.7094733 125.578125,16.857421 125.578125,17.0332031 L125.578125,17.0332031 Z M137.170898,12.1816406 C137.170898,13.1250047 137.053712,13.9687463 136.819336,14.7128906 C136.58496,15.457035 136.23633,16.0883763 135.773438,16.6069336 C135.310545,17.1254909 134.737796,17.5209947 134.055176,17.793457 C133.372555,18.0659193 132.583012,18.2021484 131.686523,18.2021484 C130.801753,18.2021484 130.029788,18.0864269 129.370605,17.8549805 C128.711422,17.623534 128.162112,17.2705102 127.722656,16.7958984 C127.283201,16.3212867 126.953614,15.7177771 126.733887,14.9853516 C126.514159,14.252926 126.404297,13.3857472 126.404297,12.3837891 C126.404297,11.4638626 126.521483,10.6362341 126.755859,9.90087891 C126.990236,9.16552367 127.338865,8.54004164 127.801758,8.02441406 C128.264651,7.50878648 128.837399,7.11328263 129.52002,6.83789062 C130.20264,6.56249862 130.995113,6.42480469 131.897461,6.42480469 C132.758793,6.42480469 133.51904,6.53906136 134.178223,6.76757812 C134.837406,6.99609489 135.388181,7.34765388 135.830566,7.82226562 C136.272951,8.29687737 136.606932,8.89599248 136.83252,9.61962891 C137.058107,10.3432653 137.170898,11.1972607 137.170898,12.1816406 L137.170898,12.1816406 Z M134.745117,12.3046875 C134.745117,11.7070283 134.698243,11.1635767 134.604492,10.6743164 C134.510742,10.1850561 134.351075,9.76611502 134.125488,9.41748047 C133.899901,9.06884591 133.599611,8.79931736 133.224609,8.60888672 C132.849607,8.41845608 132.380862,8.32324219 131.818359,8.32324219 C131.249997,8.32324219 130.775393,8.43017471 130.394531,8.64404297 C130.01367,8.85791123 129.706056,9.1435529 129.47168,9.50097656 C129.237304,9.85840022 129.071778,10.2758765 128.975098,10.753418 C128.878417,11.2309594 128.830078,11.7363255 128.830078,12.2695312 C128.830078,12.8906281 128.876953,13.448728 128.970703,13.9438477 C129.064454,14.4389673 129.222655,14.8623029 129.445312,15.2138672 C129.66797,15.5654314 129.966795,15.8334952 130.341797,16.0180664 C130.716799,16.2026376 131.188474,16.2949219 131.756836,16.2949219 C132.325198,16.2949219 132.799803,16.1894542 133.180664,15.9785156 C133.561525,15.7675771 133.869139,15.4804706 134.103516,15.1171875 C134.337892,14.7539044 134.503417,14.3305688 134.600098,13.847168 C134.696778,13.3637671 134.745117,12.8496121 134.745117,12.3046875 L134.745117,12.3046875 Z M148.236328,8.39355469 C148.236328,8.56347741 148.229004,8.70996032 148.214355,8.83300781 C148.199707,8.9560553 148.179199,9.05419885 148.152832,9.12744141 C148.126465,9.20068396 148.094238,9.25195298 148.056152,9.28125 C148.018066,9.31054702 147.972657,9.32519531 147.919922,9.32519531 C147.84375,9.32519531 147.720704,9.27246146 147.550781,9.16699219 C147.380859,9.06152291 147.155275,8.94726624 146.874023,8.82421875 C146.592772,8.70117126 146.257326,8.58691459 145.867676,8.48144531 C145.478025,8.37597604 145.025393,8.32324219 144.509766,8.32324219 C143.958982,8.32324219 143.46094,8.41845608 143.015625,8.60888672 C142.57031,8.79931736 142.189455,9.06884591 141.873047,9.41748047 C141.556639,9.76611502 141.313477,10.1850561 141.143555,10.6743164 C140.973632,11.1635767 140.888672,11.7040986 140.888672,12.2958984 C140.888672,12.9462923 140.975097,13.5190405 141.147949,14.0141602 C141.320802,14.5092798 141.562498,14.9238265 141.873047,15.2578125 C142.183595,15.5917985 142.557127,15.8437492 142.993652,16.0136719 C143.430178,16.1835946 143.912107,16.2685547 144.439453,16.2685547 C144.697267,16.2685547 144.952147,16.2392581 145.204102,16.1806641 C145.456056,16.12207 145.690429,16.0341803 145.907227,15.9169922 L145.907227,13.2802734 L143.753906,13.2802734 C143.648437,13.2802734 143.566407,13.2143561 143.507812,13.0825195 C143.449218,12.9506829 143.419922,12.7265641 143.419922,12.4101562 C143.419922,12.2460929 143.427246,12.108399 143.441895,11.9970703 C143.456543,11.8857416 143.478515,11.7963871 143.507812,11.7290039 C143.53711,11.6616208 143.572265,11.6118166 143.613281,11.5795898 C143.654297,11.5473631 143.701172,11.53125 143.753906,11.53125 L147.594727,11.53125 C147.688477,11.53125 147.771972,11.5473631 147.845215,11.5795898 C147.918457,11.6118166 147.98291,11.6601559 148.038574,11.7246094 C148.094239,11.7890628 148.136719,11.8666988 148.166016,11.9575195 C148.195313,12.0483403 148.209961,12.1523432 148.209961,12.2695312 L148.209961,16.7958984 C148.209961,16.9716806 148.1792,17.1254876 148.117676,17.2573242 C148.056152,17.3891608 147.930177,17.4931637 147.739746,17.5693359 C147.549315,17.6455082 147.313478,17.724609 147.032227,17.8066406 C146.750975,17.8886723 146.459474,17.9589841 146.157715,18.0175781 C145.855956,18.0761722 145.551271,18.120117 145.243652,18.1494141 C144.936034,18.1787111 144.626955,18.1933594 144.316406,18.1933594 C143.408199,18.1933594 142.595218,18.0629896 141.877441,17.8022461 C141.159664,17.5415026 140.55176,17.1635767 140.053711,16.668457 C139.555662,16.1733374 139.174806,15.5698278 138.911133,14.8579102 C138.64746,14.1459925 138.515625,13.3388717 138.515625,12.4365234 C138.515625,11.5048782 138.656249,10.6684607 138.9375,9.92724609 C139.218751,9.18603145 139.617185,8.55615494 140.132812,8.03759766 C140.64844,7.51904038 141.270992,7.12207169 142.000488,6.84667969 C142.729984,6.57128769 143.542964,6.43359375 144.439453,6.43359375 C144.931643,6.43359375 145.379881,6.46728482 145.78418,6.53466797 C146.188479,6.60205112 146.541502,6.68408155 146.843262,6.78076172 C147.145021,6.87744189 147.395507,6.98144476 147.594727,7.09277344 C147.793946,7.20410212 147.933105,7.30078084 148.012207,7.3828125 C148.091309,7.46484416 148.148437,7.58056566 148.183594,7.72998047 C148.21875,7.87939528 148.236328,8.10058447 148.236328,8.39355469 L148.236328,8.39355469 Z" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
-              </svg></a><a href="http://www.tutorabc.com/asp/login.asp?language=zh-tw" target="_blank" class="socialTV">
-              <svg width="26px" height="23px" viewbox="185 2 26 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g id="Group-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(185.000000, 2.000000)">
-                  <path id="Combined-Shape" d="M0,0.998336065 C0,0.446970281 0.444958257,0 1.00495587,0 L24.6308985,0 C25.1859203,0 25.6358543,0.448340461 25.6358543,0.998336065 L25.6358543,15.7635687 C25.6358543,16.3149345 25.1908961,16.7619048 24.6308985,16.7619048 L1.00495587,16.7619048 C0.449934069,16.7619048 0,16.3135643 0,15.7635687 L0,0.998336065 Z M9.86072045,12.0198268 L9.85994398,4.92997199 L16.5733087,8.4871219 L9.86072045,12.0198268 Z" fill="#FFFFFF"></path>
-                  <path id="Line" d="M5.76190476,20.4285714 L19.3809524,20.4285714" stroke="#FFFFFF" stroke-linecap="round"></path>
-                  <path id="Line" d="M12.5714286,19.3809524 L12.5714286,15.1904762" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
-                </g>
-              </svg></a>
-            <p class="copyright">Copyright © 2016 TutorABC</p>
-          </div>
-          <div class="footerA">
-            <p>官方網站</p>
-            <p> <a href="http://www.itutorgroup.com/" target="_blank">iTutorGroup</a></p>
-            <p> <a href="http://www.vipabc.com/" target="_blank">vipabc</a></p>
-            <p><a href="http://junior.vipabc.com/" target="_blank">vipabc青少年</a></p>
-            <p><a href="http://www.tutorabc.com/OfficialSite/zh-TW" target="_blank">TutorABC</a></p>
-            <p><a href="http://www.tutorabcjr.com/aspx/mvc/home/index" target="_blank">TutorABCJr</a></p>
-            <p><a href="http://www.tutorming.com/" target="_blank">TutorMing</a></p>
-          </div>
-          <div class="footerB">
-            <p>App應用</p>
-            <p> <a href="javascript:void(0)" class="navbtnAb">英語學習報</a></p>
-            <p> <a href="javascript:void(0)" class="navbtnBb">TutorMobile</a></p>
-            <p><a href="javascript:void(0)" class="navbtnCb">TutorABCJr</a></p>
-            <p><a href="javascript:void(0)" class="navbtnDb">英檢考試專家 TestTrainer</a></p>
-            <p><a href="javascript:void(0)" class="navbtnEb">銀河征戰 Galaxy Battle</a></p>
-          </div>
-          <div class="footerC">
-            <p>其他</p>
-            <p><a href="http://OnlineService.tutorabc.com/TutorABC?location=r&amp;amp;clientSn=347472&amp;amp;memberType=6" target="_blank">線上客服</a></p>
-            <p><a href="javascript:void(0)">聯絡我們</a></p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
+
+<head>
+	<title>真人線上.即時互動.英語視訊學習系統</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=0">
+	<meta charset="UTF-8">
+	<!-- <meta name="keywords" content="Ielts,Toeic,外籍老師,多益,托福,英語教學,英文會話,英文補習,英文檢定,商用英文,雅思,多益,托福,補英文,線上學習,學英文,英文翻譯,遊學,一對一,線上美語,真人視訊,Tutor,online,英文家教,真人互動">
+    <meta name="description" content="TutorABC提供線上真人即時互動英語視訊學習網站、專業外籍英語顧問，精準追蹤學習成效的客製化線上英語課程服務。全年365天、24小時，隨時隨地輕鬆線上學習英語，有效提升英語力"> -->
+	<!--link(rel='icon', type='image/ico', href='assets/images/favicon.ico')-->
+	<link href="assets/css/main.css" rel="stylesheet">
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/action.js"></script>
+	<script src="assets/js/browser.js"></script>
+	<!--IE 9-->
+	<script src="assets/js/css3-mediaqueries.js"></script>
+	<script src="assets/js/jquery.placeholder.min.js"></script>
+	<script>
+		$( document ).ready( function () {
+			$( 'input, textarea' ).placeholder();
+		} );
+
+	</script>
+	<!--Slicknav-->
+	<script src="assets/js/slicknav/modernizr2.6.2.min.js"></script>
+	<script src="assets/js/slicknav/jquery.slicknav.js"></script>
+	<script>
+		$( document ).ready( function () {
+			$( '#menu' ).slicknav();
+		} );
+
+	</script>
+	<!--Action-->
+	<script src="assets/js/action/effects-core.min.js"></script>
+	<script src="assets/js/action/jquery.fadethis.js"></script>
+</head>
+
+<body>
+	<div class="content">
+		<div class="loading"></div>
+		<nav class="nav">
+			<div class="navCon">
+				<div class="logo"><a href="http://www.tutorabc.com/OfficialSite/zh-TW"><img src="assets/images/logo.png"></a>
+				</div>
+				<div id="menu" class="navMain"><a href="javascript:void(0)" class="navbtnA">
+						<p>英文學習報</p>
+					</a><a href="javascript:void(0)" class="navbtnB">
+						<p>TutorMobile</p>
+					</a><a href="javascript:void(0)" class="navbtnC">
+						<p>TutorABCJr</p>
+					</a><a href="javascript:void(0)" class="navbtnD">
+						<p>英檢考試專家 Test Trainer</p>
+					</a><a href="javascript:void(0)" class="navbtnE">
+						<p>銀河征戰 Galaxy Battle</p>
+					</a></div>
+			</div>
+		</nav>
+		<section class="kv">
+			<div class="main">
+				<h1>
+					<p>行動學習帶著走</p>
+					<p class="ieSize">隨時隨地 隨選學習</p>
+				</h1>
+			</div>
+			<div class="mouse">
+				<div class="mouseBody"></div><i class="material-icons">expand_more</i>
+			</div>
+			<div class="pattern"></div>
+			<section id="imgs" class="gallery">
+				<div style="background-image:url(../assets/images/slider01.jpg);" class="bg"></div>
+				<div style="background-image:url(../assets/images/slider02.jpg);" class="bg"></div>
+				<div style="background-image:url(../assets/images/slider03.jpg);" class="bg"></div>
+			</section>
+		</section>
+		<section class="ourApp">
+			<h2>我們的APP</h2>
+			<p>隨時拿出手機、平板學英語，一點一滴累積實力</p>
+			<div class="clickDown"><a href="javascript:void(0)" class="navbtnAs"><img src="assets/images/iconEpaper.png">
+					<p>英文學習報</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+						<div class="circle"></div>
+					</span>
+				</a><a href="javascript:void(0)" class="navbtnBs"><img src="assets/images/iconTutormobile.png">
+					<p>TutorMobile</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+						<div class="circle"></div>
+					</span>
+				</a><a href="javascript:void(0)" class="navbtnCs"><img src="assets/images/iconJr.png">
+					<p>TutorABCJr </p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+						<div class="circle"></div>
+					</span>
+				</a><a href="javascript:void(0)" class="navbtnDs"><img src="assets/images/iconTestTrainer.png">
+					<p>Test Trainer <span>英檢考試專家</span></p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+						<div class="circle"></div>
+					</span>
+				</a><a href="javascript:void(0)" class="navbtnEs"><img src="assets/images/iconArchives.png">
+					<p>銀河征戰</p><span class="arrowDown"><i class="material-icons">arrow_downward</i>
+						<div class="circle"></div>
+					</span>
+				</a></div>
+		</section>
+		<section class="clock">
+			<h2>利用零碎時間學好英語</h2>
+			<p class="littleTitle">隨時拿出手機、平板學英語，一點一滴累積實力</p>
+			<div class="clockFace">
+				<div id="sec"></div>
+				<div id="min"></div>
+				<div id="hour"></div>
+				<p class="timeA">AM 12:30<br>午休時間</p>
+				<p class="timeB">PM 14:25<br>出差途中</p>
+				<p class="timeC">PM 15:00<br>飛機上</p>
+				<p class="timeD">PM 17 :10<br>捷運上</p>
+				<p class="timeE">PM 18:30<br>煮水餃</p>
+				<p class="timeF">AM 7:45<br>吃早餐</p>
+				<p class="timeG">AM 8:30<br>通勤中</p>
+				<p class="timeH">AM 10:00<br>會議空檔</p>
+				<p class="timeI">PM 23:00<br>睡前</p>
+			</div>
+		</section>
+		<!-- Epaper-->
+		<section class="epaper">
+			<div class="epaperPlace"></div>
+			<div class="epaperImg animate left"><img src="assets/images/mockup-egpaper.png"></div>
+			<div class="animate right">
+				<h3>英文學習報</h3>
+				<p>TutorABC提供免費行動學習英文App，超過100篇以上真人導讀文章與影片，並搭配時事相關主題，讓您在任何時間、任何地點，學習不間斷。</p>
+				<div class="appInfor"><a href="https://itunes.apple.com/tw/app/ying-wen-xue-xi-bao/id512140723?l=zh&amp;mt=8"
+						target="_blank" class="appDL appDLA">
+						<svg width="100%" height="100%" viewbox="0 0 80 80">
+							<g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<path id="apple"
+									d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z"
+									fill="#FFFFFF"></path>
+							</g>
+						</svg></a><a href="https://play.google.com/store/apps/details?id=com.wordhelpside" target="_blank"
+						class="appDL appDLB">
+						<svg width="100%" height="100%" viewbox="99 0 81 80">
+							<defs>
+								<lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
+									<stop stop-color="#1E79AF" offset="0%"></stop>
+									<stop stop-color="#63FFD3" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%"
+									y2="96.5617838%">
+									<stop stop-color="#DC4057" offset="0%"></stop>
+									<stop stop-color="#9E36BB" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
+									<stop stop-color="#FF9676" offset="0%"></stop>
+									<stop stop-color="#FFD074" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
+									<stop stop-color="#51C6AD" offset="0%"></stop>
+									<stop stop-color="#D5FFA1" offset="100%"></stop>
+								</lineargradient>
+							</defs>
+							<g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+								transform="translate(99.046667, 0.000000)">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<g id="google-play" transform="translate(26.253333, 22.686567)">
+									<path id="left"
+										d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452"
+										fill="url(#linearGradient-1)"></path>
+									<path id="bottom"
+										d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573"
+										fill="url(#linearGradient-2)"></path>
+									<path id="right"
+										d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789"
+										fill="url(#linearGradient-3)"></path>
+									<path id="top"
+										d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907"
+										fill="url(#linearGradient-4)"></path>
+								</g>
+							</g>
+						</svg></a>
+					<div class="supportA"><img src="assets/images/systemAll.png"></div>
+					<div class="supportB">支援手機與平板</div>
+				</div>
+			</div>
+		</section>
+		<!-- TutorMobile-->
+		<section class="tutormobile">
+			<div class="tutormobilePlace"></div>
+			<div class="tutormobileImg animate left"><img src="assets/images/mockup-tutormobile.png"></div>
+			<div class="animate right">
+				<h3>TutorMobile</h3>
+				<p>TutorMobile App全新設計、讓你在平板上隨時隨地訂課、上課。 最輕鬆的真人互動教學，學英語從未如此有效。</p>
+				<div class="appInfor"><a href="https://itunes.apple.com/tw/app/tutormobile/id1076884523?l=zh&amp;mt=8"
+						target="_blank" class="appDL appDLA1">
+						<svg width="100%" height="100%" viewbox="0 0 80 80">
+							<g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<path id="apple"
+									d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z"
+									fill="#FFFFFF"></path>
+							</g>
+						</svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabc.tutormobile" target="_blank"
+						class="appDL appDLB1">
+						<svg width="100%" height="100%" viewbox="99 0 81 80">
+							<defs>
+								<lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
+									<stop stop-color="#1E79AF" offset="0%"></stop>
+									<stop stop-color="#63FFD3" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%"
+									y2="96.5617838%">
+									<stop stop-color="#DC4057" offset="0%"></stop>
+									<stop stop-color="#9E36BB" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
+									<stop stop-color="#FF9676" offset="0%"></stop>
+									<stop stop-color="#FFD074" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
+									<stop stop-color="#51C6AD" offset="0%"></stop>
+									<stop stop-color="#D5FFA1" offset="100%"></stop>
+								</lineargradient>
+							</defs>
+							<g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+								transform="translate(99.046667, 0.000000)">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<g id="google-play" transform="translate(26.253333, 22.686567)">
+									<path id="left"
+										d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452"
+										fill="url(#linearGradient-1)"></path>
+									<path id="bottom"
+										d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573"
+										fill="url(#linearGradient-2)"></path>
+									<path id="right"
+										d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789"
+										fill="url(#linearGradient-3)"></path>
+									<path id="top"
+										d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907"
+										fill="url(#linearGradient-4)"></path>
+								</g>
+							</g>
+						</svg></a>
+					<div class="supportA"><img src="assets/images/systemAllBlack.png"></div>
+					<div class="supportB">支援手機與平板</div>
+				</div>
+			</div>
+		</section>
+		<!-- TutorABCJr-->
+		<section class="tutorABCJr">
+			<div class="tutorABCJrPlace"></div>
+			<div class="tutorABCJrImg animate left"><img src="assets/images/mockup-tutorABCJr.png"></div>
+			<div class="animate right">
+				<h3>TutorABCJr </h3>
+				<p>TutorABCJr運用「動態課程生成系統（DCGS）」專利，為每位國小生、國中生、高中生提供量身訂做學習內容，讓學生能針對升學英文與生活英文做全方位的學習。</p>
+				<div class="appInfor"><a href="https://itunes.apple.com/tw/app/tutorabcjr/id1111504215?l=zh&amp;mt=8"
+						target="_blank" class="appDL appDLA2">
+						<svg width="100%" height="100%" viewbox="0 0 80 80">
+							<g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<path id="apple"
+									d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z"
+									fill="#FFFFFF"></path>
+							</g>
+						</svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabc.new.tutormobilejr"
+						target="_blank" class="appDL appDLB2">
+						<svg width="100%" height="100%" viewbox="99 0 81 80">
+							<defs>
+								<lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
+									<stop stop-color="#1E79AF" offset="0%"></stop>
+									<stop stop-color="#63FFD3" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%"
+									y2="96.5617838%">
+									<stop stop-color="#DC4057" offset="0%"></stop>
+									<stop stop-color="#9E36BB" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
+									<stop stop-color="#FF9676" offset="0%"></stop>
+									<stop stop-color="#FFD074" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
+									<stop stop-color="#51C6AD" offset="0%"></stop>
+									<stop stop-color="#D5FFA1" offset="100%"></stop>
+								</lineargradient>
+							</defs>
+							<g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+								transform="translate(99.046667, 0.000000)">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<g id="google-play" transform="translate(26.253333, 22.686567)">
+									<path id="left"
+										d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452"
+										fill="url(#linearGradient-1)"></path>
+									<path id="bottom"
+										d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573"
+										fill="url(#linearGradient-2)"></path>
+									<path id="right"
+										d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789"
+										fill="url(#linearGradient-3)"></path>
+									<path id="top"
+										d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907"
+										fill="url(#linearGradient-4)"></path>
+								</g>
+							</g>
+						</svg></a>
+					<div class="supportA"><img src="assets/images/systemPad.png"></div>
+					<div class="supportB">支援平板 </div>
+				</div>
+			</div>
+		</section>
+		<!-- Test Trainer-->
+		<section class="testTrainer">
+			<div class="testTrainerPlace"></div>
+			<div class="testTrainerImg animate left"><img src="assets/images/mockup-testTrainer.png"></div>
+			<div class="animate right">
+				<h3>英檢考試專家<br>Test Trainer</h3>
+				<p>IELTS、TOEFL、GMAT英檢考試專家提供最專業的考試課程，每日開課學習不間斷，上課前簡訊貼心提醒，帶你抓住所有英檢的聽、說、讀、寫考試重點。</p>
+				<div class="appInfor"><a
+						href="https://itunes.apple.com/tw/app/ying-jian-kao-shi-zhuan-jiatest/id1054325678?l=zh&amp;mt=8"
+						target="_blank" class="appDL appDLA3">
+						<svg width="100%" height="100%" viewbox="0 0 80 80">
+							<g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<path id="apple"
+									d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z"
+									fill="#FFFFFF"></path>
+							</g>
+						</svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabc.epictraining" target="_blank"
+						class="appDL appDLB3">
+						<svg width="100%" height="100%" viewbox="99 0 81 80">
+							<defs>
+								<lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
+									<stop stop-color="#1E79AF" offset="0%"></stop>
+									<stop stop-color="#63FFD3" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%"
+									y2="96.5617838%">
+									<stop stop-color="#DC4057" offset="0%"></stop>
+									<stop stop-color="#9E36BB" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
+									<stop stop-color="#FF9676" offset="0%"></stop>
+									<stop stop-color="#FFD074" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
+									<stop stop-color="#51C6AD" offset="0%"></stop>
+									<stop stop-color="#D5FFA1" offset="100%"></stop>
+								</lineargradient>
+							</defs>
+							<g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+								transform="translate(99.046667, 0.000000)">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<g id="google-play" transform="translate(26.253333, 22.686567)">
+									<path id="left"
+										d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452"
+										fill="url(#linearGradient-1)"></path>
+									<path id="bottom"
+										d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573"
+										fill="url(#linearGradient-2)"></path>
+									<path id="right"
+										d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789"
+										fill="url(#linearGradient-3)"></path>
+									<path id="top"
+										d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907"
+										fill="url(#linearGradient-4)"></path>
+								</g>
+							</g>
+						</svg></a>
+					<div class="supportA"><img src="assets/images/systemPhone.png"></div>
+					<div class="supportB">支援手機</div>
+				</div>
+			</div>
+		</section>
+		<!-- Archives-->
+		<section class="archives">
+			<div class="archivesPlace"></div>
+			<div class="archivesBG"></div>
+			<div class="archivesImg animate left">
+			</div>
+			<div class="animate right">
+				<h3>銀河征戰<br>Galaxy Battle</h3>
+				<p>還在用背單字、記文法的方式學英語，而犧牲學習樂趣嗎?以經典的銀河對戰遊戲為靈感，孩子可邀請同伴進行對戰，切磋實力!共有中翻英、單字拼字和聽力測驗三種玩法，一玩就上手!</p>
+				<div class="appInfor"><a
+						href="https://itunes.apple.com/us/app/yin-he-zheng-zhan/id1079279133?l=zh&amp;ls=1&amp;mt=8" target="_blank"
+						class="appDL appDLA4">
+						<svg width="100%" height="100%" viewbox="0 0 80 80">
+							<g id="btn-App-store-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<path id="apple"
+									d="M48.4394464,39.6468394 C48.3986642,35.0965103 52.1506257,32.8827603 52.3221921,32.7796967 C50.1972994,29.6694345 46.903786,29.2444735 45.7464156,29.2105896 C42.9802581,28.9183407 40.2970712,30.8723139 38.8879763,30.8723139 C37.4507556,30.8723139 35.2808619,29.2388262 32.9422142,29.2868285 C29.9327699,29.3334189 27.1173925,31.0826766 25.5732944,33.7990382 C22.3866584,39.3376486 24.7632757,47.4768505 27.8163148,51.9537644 C29.3435375,54.1463369 31.1281099,56.5944507 33.463945,56.5083291 C35.7491539,56.4137365 36.6027673,55.0456729 39.3604871,55.0456729 C42.0928939,55.0456729 42.8944748,56.5083291 45.2767172,56.4532677 C47.7292738,56.4137365 49.2733719,54.2508124 50.7471558,52.0384743 C52.5120403,49.5254163 53.2208066,47.0504777 53.2489322,46.923413 C53.1912747,46.9036473 48.4858537,45.10074 48.4394464,39.6468394 Z M43.9393427,26.2655115 C45.1684335,24.722381 46.0093904,22.6229893 45.7759475,20.4925373 C43.9970003,20.5715998 41.7722615,21.7278889 40.4911382,23.2371355 C39.3576746,24.5670797 38.3451512,26.7469457 38.6067198,28.7969233 C40.6050471,28.9465773 42.6568131,27.784641 43.9393427,26.2655115 Z"
+									fill="#FFFFFF"></path>
+							</g>
+						</svg></a><a href="https://play.google.com/store/apps/details?id=com.tutorabcjr.tjrrtg" target="_blank"
+						class="appDL appDLB4">
+						<svg width="100%" height="100%" viewbox="99 0 81 80">
+							<defs>
+								<lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
+									<stop stop-color="#1E79AF" offset="0%"></stop>
+									<stop stop-color="#63FFD3" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-2" x1="84.7178118%" y1="14.4459862%" x2="5.24419544%"
+									y2="96.5617838%">
+									<stop stop-color="#DC4057" offset="0%"></stop>
+									<stop stop-color="#9E36BB" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-3" x1="50%" y1="0%" x2="50%" y2="97.8256537%">
+									<stop stop-color="#FF9676" offset="0%"></stop>
+									<stop stop-color="#FFD074" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-4" x1="17.4435371%" y1="0%" x2="100%" y2="100%">
+									<stop stop-color="#51C6AD" offset="0%"></stop>
+									<stop stop-color="#D5FFA1" offset="100%"></stop>
+								</lineargradient>
+							</defs>
+							<g id="btn-Google-play-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+								transform="translate(99.046667, 0.000000)">
+								<ellipse id="Oval-16" fill="#000000" cx="39.9766667" cy="40" rx="39.9766667" ry="40"></ellipse>
+								<g id="google-play" transform="translate(26.253333, 22.686567)">
+									<path id="left"
+										d="M1.39989983,1.04990452 C0.76953558,1.24977952 0.361595695,1.8966656 0.361595695,2.87536386 L0.365480836,33.6777749 C0.365480836,34.6456425 0.760794011,35.2826825 1.37367513,35.4953573 L18.3760268,18.2588464 L1.39989983,1.04990452"
+										fill="url(#linearGradient-1)"></path>
+									<path id="bottom"
+										d="M1.37367513,35.4953573 C1.81463872,35.6469867 2.36730013,35.576095 2.96949711,35.241329 L23.7180967,23.6741789 L18.3760268,18.2588464 L1.37367513,35.4953573"
+										fill="url(#linearGradient-2)"></path>
+									<path id="right"
+										d="M23.7210106,23.6741789 L30.7958537,19.7308323 C32.2304423,18.9283785 32.2304423,17.622791 30.7958537,16.8223064 L23.6947859,12.8641907 L18.3760268,18.2558926 L23.7210106,23.6741789"
+										fill="url(#linearGradient-3)"></path>
+									<path id="top"
+										d="M23.6938146,12.8641907 L2.96949711,1.3127943 C2.38186941,0.986889745 1.83989214,0.91107509 1.40087112,1.04990452 L18.3760268,18.2558926 L23.6938146,12.8641907"
+										fill="url(#linearGradient-4)"></path>
+								</g>
+							</g>
+						</svg></a>
+					<div class="supportA"><img src="assets/images/systemPhone.png"></div>
+					<div class="supportB">支援手機</div>
+				</div>
+			</div>
+		</section>
+		<!-- Why-->
+		<section class="why">
+			<h2>為什麼選擇TutorABC?</h2>
+			<p>四大特色，幫助學習者輕鬆提升英語力</p>
+			<div class="whyBox">
+				<div><img src="assets/images/whyA.png">
+					<p>全球外師<span class="small">10000+專業全球顧問</span></p>
+				</div>
+				<div><img src="assets/images/whyB.png">
+					<p>方便省時<span class="small">365X24，在家遊學全世界</span></p>
+				</div>
+				<div><img src="assets/images/whyC.png">
+					<p>快速有效<span class="small">DCGS量身打造，符合個人需要</span></p>
+				</div>
+				<div><img src="assets/images/whyD.png">
+					<p>大膽開口<span class="small">單向視訊，加強口說信心</span></p>
+				</div>
+			</div>
+		</section>
+		<!-- AD-->
+		<section class="footerAd">
+			<div>
+				<h3>隨時隨地 提升英語力</h3>
+				<p>善用工具，手機和平板幫助你打開英文學習途徑</p>
+			</div>
+		</section>
+		<!-- Footer-->
+		<footer>
+			<div class="footer">
+				<div class="logoFooter"><img src="assets/images/logo.png"></div>
+				<div class="social"><a href="https://www.facebook.com/TutorABC.com.tw" target="_blank" class="socialFb">
+						<svg width="11px" height="22px" viewbox="0 0 11 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
+							<desc>Created with Sketch.</desc>
+							<defs></defs>
+							<path id="Shape"
+								d="M2.33127472,22 L2.33127472,10.9986115 L0,10.9986115 L0,7.20790204 L2.33127472,7.20790204 L2.33127472,4.93208786 C2.33127472,1.83981318 3.64693756,0 7.38724013,0 L10.5003578,0 L10.5003578,3.79209796 L8.55465927,3.79209796 C7.09859254,3.79209796 7.00237668,4.3218253 7.00237668,5.31046453 L6.99596229,7.20790204 L10.5217391,7.20790204 L10.10908,10.9986115 L6.99596229,10.9986115 L6.99596229,22 L2.33127472,22 Z"
+								stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
+						</svg></a><a href="https://www.youtube.com/user/tutorabcmd" target="_blank" class="socialYT">
+						<svg width="26px" height="18px" viewbox="48 4 26 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
+							<desc>Created with Sketch.</desc>
+							<defs></defs>
+							<path id="Youtube"
+								d="M57.9981,16.3193673 L57.9973125,9.12880437 L64.8060375,12.736482 L57.9981,16.3193673 Z M72.948,7.88279202 C72.948,7.88279202 72.7015125,6.11934065 71.9463,5.34278225 C70.9879125,4.32309948 69.9137625,4.31830097 69.421575,4.25911939 C65.89515,4 60.6055125,4 60.6055125,4 L60.5944875,4 C60.5944875,4 55.30485,4 51.778425,4.25911939 C51.28545,4.31830097 50.2120875,4.32309948 49.2529125,5.34278225 C48.4977,6.11934065 48.252,7.88279202 48.252,7.88279202 C48.252,7.88279202 48,9.9541476 48,12.0247034 L48,13.9664993 C48,16.0378549 48.252,18.1084107 48.252,18.1084107 C48.252,18.1084107 48.4977,19.8718621 49.2529125,20.6484205 C50.2120875,21.6681033 51.4713,21.6361132 52.032,21.7424801 C54.048,21.9392189 60.6,22 60.6,22 C60.6,22 65.89515,21.9920025 69.421575,21.7328831 C69.9137625,21.6729018 70.9879125,21.6681033 71.9463,20.6484205 C72.7015125,19.8718621 72.948,18.1084107 72.948,18.1084107 C72.948,18.1084107 73.2,16.0378549 73.2,13.9664993 L73.2,12.0247034 C73.2,9.9541476 72.948,7.88279202 72.948,7.88279202 L72.948,7.88279202 Z"
+								stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
+						</svg></a><a href="http://blog.tutorabc.com/blog/" target="_blank" class="socialBlog">
+						<svg width="40px" height="13px" viewbox="109 6 40 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
+							<desc>Created with Sketch.</desc>
+							<defs></defs>
+							<path id="BLOG"
+								d="M117.474609,14.5898438 C117.474609,14.9941426 117.418946,15.3603499 117.307617,15.6884766 C117.196289,16.0166032 117.042481,16.3066394 116.846191,16.5585938 C116.649901,16.8105481 116.415529,17.0273428 116.143066,17.2089844 C115.870604,17.3906259 115.570314,17.5400385 115.242188,17.6572266 C114.914061,17.7744146 114.563967,17.8608396 114.191895,17.9165039 C113.819822,17.9721682 113.405276,18 112.948242,18 L109.924805,18 C109.731444,18 109.568848,17.9428717 109.437012,17.8286133 C109.305175,17.7143549 109.239258,17.5283216 109.239258,17.2705078 L109.239258,7.35644531 C109.239258,7.09863152 109.305175,6.91259823 109.437012,6.79833984 C109.568848,6.68408146 109.731444,6.62695312 109.924805,6.62695312 L112.78125,6.62695312 C113.478519,6.62695312 114.068845,6.68554629 114.552246,6.80273438 C115.035647,6.91992246 115.442869,7.09716678 115.773926,7.33447266 C116.104982,7.57177853 116.358398,7.8720685 116.53418,8.23535156 C116.709962,8.59863463 116.797852,9.02636473 116.797852,9.51855469 C116.797852,9.79394669 116.762696,10.0532214 116.692383,10.2963867 C116.62207,10.539552 116.519532,10.7607412 116.384766,10.9599609 C116.249999,11.1591807 116.084474,11.3349602 115.888184,11.4873047 C115.691894,11.6396492 115.467775,11.7626948 115.21582,11.8564453 C115.538088,11.9150394 115.835448,12.0175774 116.10791,12.1640625 C116.380372,12.3105476 116.617675,12.4995106 116.819824,12.730957 C117.021974,12.9624035 117.18164,13.2333969 117.298828,13.5439453 C117.416016,13.8544937 117.474609,14.2031231 117.474609,14.5898438 L117.474609,14.5898438 Z M114.486328,9.79980469 C114.486328,9.57128792 114.451172,9.36621185 114.380859,9.18457031 C114.310547,9.00292878 114.205079,8.85205138 114.064453,8.73193359 C113.923827,8.61181581 113.746583,8.51953157 113.532715,8.45507812 C113.318847,8.39062468 113.033205,8.35839844 112.675781,8.35839844 L111.506836,8.35839844 L111.506836,11.3115234 L112.798828,11.3115234 C113.132814,11.3115234 113.399413,11.2719731 113.598633,11.1928711 C113.797853,11.1137691 113.963378,11.0053718 114.095215,10.8676758 C114.227051,10.7299798 114.325195,10.5688486 114.389648,10.3842773 C114.454102,10.1997061 114.486328,10.0048838 114.486328,9.79980469 L114.486328,9.79980469 Z M115.075195,14.6689453 C115.075195,14.4052721 115.03125,14.1694346 114.943359,13.9614258 C114.855468,13.7534169 114.726563,13.5791023 114.556641,13.4384766 C114.386718,13.2978509 114.169923,13.1894535 113.90625,13.1132812 C113.642577,13.037109 113.299807,12.9990234 112.87793,12.9990234 L111.506836,12.9990234 L111.506836,16.2333984 L113.176758,16.2333984 C113.499025,16.2333984 113.770018,16.1997074 113.989746,16.1323242 C114.209474,16.0649411 114.399902,15.9653327 114.561035,15.8334961 C114.722169,15.7016595 114.848144,15.5375986 114.938965,15.3413086 C115.029786,15.1450185 115.075195,14.9208997 115.075195,14.6689453 L115.075195,14.6689453 Z M125.578125,17.0332031 C125.578125,17.2089853 125.570801,17.356933 125.556152,17.4770508 C125.541504,17.5971686 125.519531,17.6967769 125.490234,17.7758789 C125.460937,17.8549809 125.424317,17.9121092 125.380371,17.9472656 C125.336426,17.9824221 125.285157,18 125.226562,18 L120.014648,18 C119.821288,18 119.658692,17.9428717 119.526855,17.8286133 C119.395019,17.7143549 119.329102,17.5283216 119.329102,17.2705078 L119.329102,6.94335938 C119.329102,6.88476533 119.348144,6.83203148 119.38623,6.78515625 C119.424317,6.73828102 119.487304,6.70019546 119.575195,6.67089844 C119.663086,6.64160142 119.781738,6.61816415 119.931152,6.60058594 C120.080567,6.58300772 120.2666,6.57421875 120.489258,6.57421875 C120.717775,6.57421875 120.905273,6.58300772 121.051758,6.60058594 C121.198243,6.61816415 121.315429,6.64160142 121.40332,6.67089844 C121.491211,6.70019546 121.554199,6.73828102 121.592285,6.78515625 C121.630371,6.83203148 121.649414,6.88476533 121.649414,6.94335938 L121.649414,16.0927734 L125.226562,16.0927734 C125.285157,16.0927734 125.336426,16.1088866 125.380371,16.1411133 C125.424317,16.17334 125.460937,16.2260739 125.490234,16.2993164 C125.519531,16.372559 125.541504,16.4692377 125.556152,16.5893555 C125.570801,16.7094733 125.578125,16.857421 125.578125,17.0332031 L125.578125,17.0332031 Z M137.170898,12.1816406 C137.170898,13.1250047 137.053712,13.9687463 136.819336,14.7128906 C136.58496,15.457035 136.23633,16.0883763 135.773438,16.6069336 C135.310545,17.1254909 134.737796,17.5209947 134.055176,17.793457 C133.372555,18.0659193 132.583012,18.2021484 131.686523,18.2021484 C130.801753,18.2021484 130.029788,18.0864269 129.370605,17.8549805 C128.711422,17.623534 128.162112,17.2705102 127.722656,16.7958984 C127.283201,16.3212867 126.953614,15.7177771 126.733887,14.9853516 C126.514159,14.252926 126.404297,13.3857472 126.404297,12.3837891 C126.404297,11.4638626 126.521483,10.6362341 126.755859,9.90087891 C126.990236,9.16552367 127.338865,8.54004164 127.801758,8.02441406 C128.264651,7.50878648 128.837399,7.11328263 129.52002,6.83789062 C130.20264,6.56249862 130.995113,6.42480469 131.897461,6.42480469 C132.758793,6.42480469 133.51904,6.53906136 134.178223,6.76757812 C134.837406,6.99609489 135.388181,7.34765388 135.830566,7.82226562 C136.272951,8.29687737 136.606932,8.89599248 136.83252,9.61962891 C137.058107,10.3432653 137.170898,11.1972607 137.170898,12.1816406 L137.170898,12.1816406 Z M134.745117,12.3046875 C134.745117,11.7070283 134.698243,11.1635767 134.604492,10.6743164 C134.510742,10.1850561 134.351075,9.76611502 134.125488,9.41748047 C133.899901,9.06884591 133.599611,8.79931736 133.224609,8.60888672 C132.849607,8.41845608 132.380862,8.32324219 131.818359,8.32324219 C131.249997,8.32324219 130.775393,8.43017471 130.394531,8.64404297 C130.01367,8.85791123 129.706056,9.1435529 129.47168,9.50097656 C129.237304,9.85840022 129.071778,10.2758765 128.975098,10.753418 C128.878417,11.2309594 128.830078,11.7363255 128.830078,12.2695312 C128.830078,12.8906281 128.876953,13.448728 128.970703,13.9438477 C129.064454,14.4389673 129.222655,14.8623029 129.445312,15.2138672 C129.66797,15.5654314 129.966795,15.8334952 130.341797,16.0180664 C130.716799,16.2026376 131.188474,16.2949219 131.756836,16.2949219 C132.325198,16.2949219 132.799803,16.1894542 133.180664,15.9785156 C133.561525,15.7675771 133.869139,15.4804706 134.103516,15.1171875 C134.337892,14.7539044 134.503417,14.3305688 134.600098,13.847168 C134.696778,13.3637671 134.745117,12.8496121 134.745117,12.3046875 L134.745117,12.3046875 Z M148.236328,8.39355469 C148.236328,8.56347741 148.229004,8.70996032 148.214355,8.83300781 C148.199707,8.9560553 148.179199,9.05419885 148.152832,9.12744141 C148.126465,9.20068396 148.094238,9.25195298 148.056152,9.28125 C148.018066,9.31054702 147.972657,9.32519531 147.919922,9.32519531 C147.84375,9.32519531 147.720704,9.27246146 147.550781,9.16699219 C147.380859,9.06152291 147.155275,8.94726624 146.874023,8.82421875 C146.592772,8.70117126 146.257326,8.58691459 145.867676,8.48144531 C145.478025,8.37597604 145.025393,8.32324219 144.509766,8.32324219 C143.958982,8.32324219 143.46094,8.41845608 143.015625,8.60888672 C142.57031,8.79931736 142.189455,9.06884591 141.873047,9.41748047 C141.556639,9.76611502 141.313477,10.1850561 141.143555,10.6743164 C140.973632,11.1635767 140.888672,11.7040986 140.888672,12.2958984 C140.888672,12.9462923 140.975097,13.5190405 141.147949,14.0141602 C141.320802,14.5092798 141.562498,14.9238265 141.873047,15.2578125 C142.183595,15.5917985 142.557127,15.8437492 142.993652,16.0136719 C143.430178,16.1835946 143.912107,16.2685547 144.439453,16.2685547 C144.697267,16.2685547 144.952147,16.2392581 145.204102,16.1806641 C145.456056,16.12207 145.690429,16.0341803 145.907227,15.9169922 L145.907227,13.2802734 L143.753906,13.2802734 C143.648437,13.2802734 143.566407,13.2143561 143.507812,13.0825195 C143.449218,12.9506829 143.419922,12.7265641 143.419922,12.4101562 C143.419922,12.2460929 143.427246,12.108399 143.441895,11.9970703 C143.456543,11.8857416 143.478515,11.7963871 143.507812,11.7290039 C143.53711,11.6616208 143.572265,11.6118166 143.613281,11.5795898 C143.654297,11.5473631 143.701172,11.53125 143.753906,11.53125 L147.594727,11.53125 C147.688477,11.53125 147.771972,11.5473631 147.845215,11.5795898 C147.918457,11.6118166 147.98291,11.6601559 148.038574,11.7246094 C148.094239,11.7890628 148.136719,11.8666988 148.166016,11.9575195 C148.195313,12.0483403 148.209961,12.1523432 148.209961,12.2695312 L148.209961,16.7958984 C148.209961,16.9716806 148.1792,17.1254876 148.117676,17.2573242 C148.056152,17.3891608 147.930177,17.4931637 147.739746,17.5693359 C147.549315,17.6455082 147.313478,17.724609 147.032227,17.8066406 C146.750975,17.8886723 146.459474,17.9589841 146.157715,18.0175781 C145.855956,18.0761722 145.551271,18.120117 145.243652,18.1494141 C144.936034,18.1787111 144.626955,18.1933594 144.316406,18.1933594 C143.408199,18.1933594 142.595218,18.0629896 141.877441,17.8022461 C141.159664,17.5415026 140.55176,17.1635767 140.053711,16.668457 C139.555662,16.1733374 139.174806,15.5698278 138.911133,14.8579102 C138.64746,14.1459925 138.515625,13.3388717 138.515625,12.4365234 C138.515625,11.5048782 138.656249,10.6684607 138.9375,9.92724609 C139.218751,9.18603145 139.617185,8.55615494 140.132812,8.03759766 C140.64844,7.51904038 141.270992,7.12207169 142.000488,6.84667969 C142.729984,6.57128769 143.542964,6.43359375 144.439453,6.43359375 C144.931643,6.43359375 145.379881,6.46728482 145.78418,6.53466797 C146.188479,6.60205112 146.541502,6.68408155 146.843262,6.78076172 C147.145021,6.87744189 147.395507,6.98144476 147.594727,7.09277344 C147.793946,7.20410212 147.933105,7.30078084 148.012207,7.3828125 C148.091309,7.46484416 148.148437,7.58056566 148.183594,7.72998047 C148.21875,7.87939528 148.236328,8.10058447 148.236328,8.39355469 L148.236328,8.39355469 Z"
+								stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
+						</svg></a><a href="http://www.tutorabc.com/asp/login.asp?language=zh-tw" target="_blank" class="socialTV">
+						<svg width="26px" height="23px" viewbox="185 2 26 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch-->
+							<desc>Created with Sketch.</desc>
+							<defs></defs>
+							<g id="Group-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+								transform="translate(185.000000, 2.000000)">
+								<path id="Combined-Shape"
+									d="M0,0.998336065 C0,0.446970281 0.444958257,0 1.00495587,0 L24.6308985,0 C25.1859203,0 25.6358543,0.448340461 25.6358543,0.998336065 L25.6358543,15.7635687 C25.6358543,16.3149345 25.1908961,16.7619048 24.6308985,16.7619048 L1.00495587,16.7619048 C0.449934069,16.7619048 0,16.3135643 0,15.7635687 L0,0.998336065 Z M9.86072045,12.0198268 L9.85994398,4.92997199 L16.5733087,8.4871219 L9.86072045,12.0198268 Z"
+									fill="#FFFFFF"></path>
+								<path id="Line" d="M5.76190476,20.4285714 L19.3809524,20.4285714" stroke="#FFFFFF"
+									stroke-linecap="round"></path>
+								<path id="Line" d="M12.5714286,19.3809524 L12.5714286,15.1904762" stroke="#FFFFFF" stroke-width="2"
+									stroke-linecap="square"></path>
+							</g>
+						</svg></a>
+					<p class="copyright">Copyright © 2016 TutorABC</p>
+				</div>
+				<div class="footerA">
+					<p>官方網站</p>
+					<p> <a href="http://www.itutorgroup.com/" target="_blank">iTutorGroup</a></p>
+					<p> <a href="http://www.vipabc.com/" target="_blank">vipabc</a></p>
+					<p><a href="http://junior.vipabc.com/" target="_blank">vipabc青少年</a></p>
+					<p><a href="http://www.tutorabc.com/OfficialSite/zh-TW" target="_blank">TutorABC</a></p>
+					<p><a href="http://www.tutorabcjr.com/aspx/mvc/home/index" target="_blank">TutorABCJr</a></p>
+					<p><a href="http://www.tutorming.com/" target="_blank">TutorMing</a></p>
+				</div>
+				<div class="footerB">
+					<p>App應用</p>
+					<p> <a href="javascript:void(0)" class="navbtnAb">英語學習報</a></p>
+					<p> <a href="javascript:void(0)" class="navbtnBb">TutorMobile</a></p>
+					<p><a href="javascript:void(0)" class="navbtnCb">TutorABCJr</a></p>
+					<p><a href="javascript:void(0)" class="navbtnDb">英檢考試專家 TestTrainer</a></p>
+					<p><a href="javascript:void(0)" class="navbtnEb">銀河征戰 Galaxy Battle</a></p>
+				</div>
+				<div class="footerC">
+					<p>其他</p>
+					<p><a
+							href="http://OnlineService.tutorabc.com/TutorABC?location=r&amp;amp;clientSn=347472&amp;amp;memberType=6"
+							target="_blank">線上客服</a></p>
+					<p><a href="javascript:void(0)">聯絡我們</a></p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
 </html>
 <script>
-  $(document).ready(function() {
-  	$('.slicknav_btn').click(function(){
-      //$('span').toggleClass('slicknav_icon');
-  		$('span').toggleClass('slicknav_icon_open');
-  	});
-  });
-  $(window).resize(function() {
-  	var window_width = $(window).width();
-  	if ( window_width <= 767 ) {
-  		$('.archivesImg').html("<img src='assets/images/mockup-ArchivesS.png'>");
-  	}else{
-  		$('.archivesImg').html("<img src='assets/images/mockup-Archives.png'>");
-  	}
-  });
-  
-  $(window).resize();
+	$( document ).ready( function () {
+		$( '.slicknav_btn' ).click( function () {
+			//$('span').toggleClass('slicknav_icon');
+			$( 'span' ).toggleClass( 'slicknav_icon_open' );
+		} );
+	} );
+	$( window ).resize( function () {
+		var window_width = $( window ).width();
+		if ( window_width <= 767 ) {
+			$( '.archivesImg' ).html( "<img src='assets/images/mockup-ArchivesS.png'>" );
+		} else {
+			$( '.archivesImg' ).html( "<img src='assets/images/mockup-Archives.png'>" );
+		}
+	} );
+
+	$( window ).resize();
 </script>
